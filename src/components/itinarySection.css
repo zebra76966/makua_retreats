@@ -1,0 +1,85 @@
+.verticalCar {
+  height: 90dvh; /* Full height of the viewport minus some margin */
+  overflow-y: auto; /* Allow scrolling */
+  position: relative;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  -webkit-mask: linear-gradient(transparent, #e7daca 5%, #e7daca 95%, transparent);
+  mask: linear-gradient(transparent, #e7daca 5%, #e7daca 95%, transparent);
+}
+
+.verticalCar .card-img {
+  height: 45%;
+  width: 80%;
+  object-fit: cover;
+  margin: 3em auto;
+  border-radius: 2em;
+  transition: all 0.5s ease-in-out;
+  display: block;
+  opacity: 0.7; /* Dim inactive images */
+}
+
+.verticalCar .card-img.active {
+  transform: translateY(-2%); /* Visually center the active image */
+  opacity: 1; /* Highlight the active image */
+  z-index: 10;
+  height: 65%;
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+.no-scroll::-webkit-scrollbar-track {
+  display: none;
+}
+
+.no-scroll::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.timeline .days {
+  height: 5dvh;
+  /* overflow: hidden; */
+}
+
+.timeline .line {
+  border-bottom: 1px solid #222222;
+}
+
+.timestamp h6 {
+  transition: all 0.5s ease-in-out;
+}
+.timestamp.active h6 {
+  font-weight: 900;
+  font-size: 2em !important;
+}
+
+.vLine {
+  border-left: 1px solid #222222;
+  height: 50%;
+  margin-left: 50%;
+  /* margin-right: auto; */
+}
+
+.spinner {
+  animation: 5s spinner linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.zoomer {
+  animation: 3s zoomer ease-out infinite;
+}
+
+@keyframes zoomer {
+  0%,
+  100% {
+    rotate: 10deg;
+  }
+  50% {
+    rotate: -10deg;
+  }
+}

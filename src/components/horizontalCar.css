@@ -1,0 +1,41 @@
+.hCar {
+  position: relative;
+  height: 60dvh; /* Adjust height as needed */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide overflowing images */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+}
+
+.heroImg {
+  position: absolute;
+  width: 92%; /* Reduce width to allow for spacing */
+  height: 60dvh; /* Adjust height */
+  object-fit: cover;
+  border-radius: 3em;
+  transition: transform 1s ease-in-out, border-radius 1s ease-in-out, filter 1.5s ease;
+  filter: contrast(0.6);
+}
+
+.heroImg.active {
+  transform: translateX(0);
+  border-radius: 0em;
+  z-index: 2;
+  filter: contrast(1);
+}
+
+.heroImg.left {
+  transform: translateX(calc(-100% - 2rem)); /* Move left with a gap */
+  border-radius: 0em;
+  z-index: 1;
+  filter: contrast(0.6);
+  border-radius: 3em;
+}
+
+.heroImg.right {
+  transform: translateX(calc(100% + 2rem)); /* Move right with a gap */
+  border-radius: 3em;
+  z-index: 1;
+  filter: contrast(0.6);
+}

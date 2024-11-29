@@ -1,0 +1,143 @@
+.cards {
+  position: relative;
+}
+
+.cards .card-img {
+  border-radius: 1rem;
+  width: 100%; /* Make the image responsive to the parent element's width */
+  min-height: 620px; /* Ensure the height is at least 620px */
+  max-width: 500px; /* Optional: Limit the width */
+  object-fit: cover; /* Ensure the image covers the area */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.cards .card-img:nth-child(1) {
+  rotate: 0deg;
+  filter: contrast(0.2);
+  /* border: 5px solid red; */
+  /* z-index: 5; */
+}
+.cards .card-img:nth-child(2) {
+  rotate: 4deg;
+  filter: contrast(0.2);
+  /* border: 5px solid coral; */
+  /* z-index: 4; */
+}
+.cards .card-img:nth-child(3) {
+  rotate: 8deg;
+  filter: contrast(0.2);
+  /* border: 5px solid hotpink; */
+  /* z-index: 3; */
+}
+.cards .card-img:nth-child(4) {
+  rotate: 12deg;
+  filter: contrast(0.2);
+  /* border: 5px solid deepskyblue; */
+  /* z-index: 2; */
+}
+.cards .card-img:nth-child(5) {
+  rotate: 14deg;
+  filter: contrast(0.2);
+  /* border: 5px solid greenyellow; */
+  /* z-index: 1; */
+}
+
+.cards .card-img.inactive {
+  animation: 1s setInActive ease-in-out forwards;
+}
+
+@keyframes setInActive {
+  0% {
+    transform: translateX(0%);
+    filter: contrast(1);
+    z-index: 5;
+  }
+  50% {
+    transform: translateX(-120%);
+    filter: contrast(0.6);
+    z-index: 5;
+  }
+  100% {
+    transform: translateX(0%);
+    filter: contrast(0.2);
+    z-index: 1;
+    scale: 0.8;
+  }
+}
+
+.cards .card-img.active {
+  animation: 1.5s setActive ease-out forwards;
+}
+
+@keyframes setActive {
+  0% {
+    filter: contrast(0.2);
+    z-index: 4;
+  }
+  100% {
+    filter: contrast(1);
+    z-index: 5;
+
+    /* rotate: 0deg; */
+  }
+}
+/* 
+.Zindex1 {
+  animation: 0.5s zIndex1 ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes zIndex1 {
+  to {
+    z-index: 1;
+  }
+}
+
+.Zindex2 {
+  animation: 1.5 zIndex2 ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes zIndex2 {
+  to {
+    z-index: 2;
+  }
+}
+.Zindex3 {
+  animation: 1.5 zIndex3 ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes zIndex3 {
+  to {
+    z-index: 3;
+  }
+}
+
+.Zindex4 {
+  animation: 1.5 zIndex4 ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes zIndex4 {
+  to {
+    z-index: 4;
+  }
+}
+.Zindex5 {
+  animation: 1.5 zIndex5 ease-out forwards;
+  animation-delay: 1s;
+}
+@keyframes zIndex5 {
+  to {
+    z-index: 5;
+  }
+} */
+
+.carButton {
+  transition: all 0.2s ease-out;
+}
+.carButton:nth-child(1) {
+  scale: 0.9;
+}
+.carButton:hover {
+  scale: 1.1;
+}
