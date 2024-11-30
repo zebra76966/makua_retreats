@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [loadTrans, setLoadTrans] = useState(false);
   const [firstLoad, setFirstLoad] = useState(false);
+  const [isSecondary, setSecondary] = useState(false);
 
   useEffect(() => {
     if (loadTrans) {
@@ -23,8 +24,9 @@ function App() {
             setLoadTrans(e);
           }}
           loadTrans={loadTrans}
+          isSecondary={isSecondary}
         />
-        <Home />
+        <Home setSecondary={(e) => setSecondary(e)} />
       </div>
     </>
   );

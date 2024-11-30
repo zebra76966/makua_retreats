@@ -3,7 +3,7 @@ import AnimEyeInfinte from "./motions/logo/animatedEyeInfinite";
 import { motion } from "framer-motion";
 import AnimEye from "./motions/logo/animatedEye";
 
-const Navbar = ({ setLoadTrans, loadTrans }) => {
+const Navbar = ({ setLoadTrans, loadTrans, isSecondary }) => {
   const [fullNav, setFullNav] = useState(false);
   const [active, setActive] = useState("Home");
 
@@ -18,7 +18,7 @@ const Navbar = ({ setLoadTrans, loadTrans }) => {
   return (
     <>
       <motion.nav
-        class="navbar navbar-expand-lg bg-none position-fixed top-0 start-0 w-100 px-lg-5 px-2 pt-4 bg-primary"
+        class={`navbar navbar-expand-lg bg-none position-fixed top-0 start-0 w-100 px-lg-5 px-2 pt-4 ${isSecondary ? "bg-primary transitionSecondary" : "bg-primary"}`}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 6 }}
@@ -45,7 +45,7 @@ const Navbar = ({ setLoadTrans, loadTrans }) => {
       </motion.nav>
 
       {fullNav && (
-        <div className="w-100 p-md-5 position-fixed bg-primary" style={{ height: "100dvh", zIndex: 98 }}>
+        <div className={`w-100 p-md-5 position-fixed  ${isSecondary ? "bg-primary transitionSecondary" : "bg-primary"}`} style={{ height: "100dvh", zIndex: 98 }}>
           <div class="container-fluid p-lg-5 p-2 d-lg-flex justify-content-between">
             <div class="navigation-menu-overlay ">
               <div class="menu-button" onMouseOver={() => setActive("Home")}>

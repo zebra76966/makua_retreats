@@ -3,8 +3,8 @@
   overflow-y: auto; /* Allow scrolling */
   position: relative;
   scroll-behavior: smooth; /* Smooth scrolling effect */
-  -webkit-mask: linear-gradient(transparent, #e7daca 5%, #e7daca 95%, transparent);
-  mask: linear-gradient(transparent, #e7daca 5%, #e7daca 95%, transparent);
+  -webkit-mask: linear-gradient(transparent, #cfc3b4 5%, #cfc3b4 95%, transparent);
+  mask: linear-gradient(transparent, #cfc3b4 5%, #cfc3b4 95%, transparent);
 }
 
 .verticalCar .card-img {

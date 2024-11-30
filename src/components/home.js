@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AnimEye from "./motions/logo/animatedEye";
 import "./master.css";
 import { easeIn, motion, spring } from "framer-motion";
@@ -6,17 +6,44 @@ import ScrollMouse from "./extras/scrollMouse";
 import Carousel from "./carousel";
 import ItinarySection from "./itinarySection";
 import HorizontalCar from "./horizontalCar";
+import Archetypes from "./archetypes";
 
-const Home = () => {
+const Home = ({ setSecondary }) => {
   const [loader, setLoader] = useState(true);
+  const [isSecondary, setIsSecondary] = useState(false);
+  const archetypesRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => setLoader(false), 6000);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSecondary(entry.isIntersecting); // Toggle class based on visibility
+      },
+      { threshold: 0.5 } // Adjust as needed
+    );
+    const archetypesElement = archetypesRef.current;
+    if (archetypesElement) {
+      observer.observe(archetypesElement);
+    }
+
+    // Cleanup observer
+    return () => {
+      if (archetypesElement) {
+        observer.unobserve(archetypesElement);
+      }
+    };
+  }, [loader]);
+
+  useEffect(() => {
+    setSecondary(isSecondary);
+  }, [isSecondary]);
+
   return (
     <>
-      <div className=" bg-primary">
+      <div className={isSecondary ? "bg-primary transitionSecondary" : "bg-primary"}>
         <div className="w-100 d-flex align-items-center justify-content-center hero px-lg-5 px-2">
           {loader && (
             <div style={{ scale: "0.5" }} className="scaleOut">
@@ -83,12 +110,20 @@ const Home = () => {
               <Carousel />
             </div>
 
-            <div className="p-5 my-2">
+            <div className="p-5 my-2 d-none">
               <ItinarySection />
             </div>
 
-            <div className="w-100 d-flex align-items-center justify-content-center border-top border-dark " style={{ height: "100dvh" }}>
-              <h4 className="display-1 fw-bold mt-0 pt-0"> ARCHETYPE SECTION</h4>
+            <div ref={archetypesRef} className="w-100 d-flex align-items-center justify-content-center mt-5 py-5 " style={{ height: "100dvh" }}>
+              <div>
+                <motion.div className="py-0" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                  <p className="lead py-0 my-0 fw-bold">THE</p>
+                  <h4 className="display-2 my-0 mb-0 fw-bold"> ARCHETYPES</h4>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
+                  <Archetypes />
+                </motion.div>
+              </div>
             </div>
 
             <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
