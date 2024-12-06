@@ -3,9 +3,10 @@ import AnimEyeInfinte from "./motions/logo/animatedEyeInfinite";
 import { motion } from "framer-motion";
 import AnimEye from "./motions/logo/animatedEye";
 
-const Navbar = ({ setLoadTrans, loadTrans, isSecondary }) => {
+const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
   const [fullNav, setFullNav] = useState(false);
   const [active, setActive] = useState("Home");
+  const [activeLink, setActiveLink] = useState("");
 
   useEffect(() => {
     if (loadTrans) {
@@ -15,10 +16,30 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary }) => {
     }
   }, [loadTrans]);
 
+  useEffect(() => {
+    if (activeLink !== "") {
+      setLoadTrans(!loadTrans);
+      setTimeout(() => {
+        const element = document.getElementById(activeLink);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+
+        // Reset activeLink after scroll
+        setActiveLink("");
+      }, 2000);
+    }
+  }, [activeLink]);
+
   return (
     <>
       <motion.nav
-        class={`navbar navbar-expand-lg bg-none position-fixed top-0 start-0 w-100 px-lg-5 px-2 pt-4 ${isSecondary ? "bg-primary transitionSecondary" : "bg-primary"}`}
+        class={`navbar navbar-expand-lg bg-none position-fixed top-0 start-0 w-100 px-lg-5 px-2 pt-4 ${
+          isSecondary ? "bg-primary transitionSecondary" : isTertary ? "bg-primary transitionSecondary" : "bg-primary"
+        }`}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 6 }}
@@ -52,7 +73,7 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary }) => {
                 <span class="menu-text">Home</span>
                 <span class="menu-text">Home</span>
               </div>
-              <div class="menu-button" onMouseOver={() => setActive("About")}>
+              <div class="menu-button" onMouseOver={() => setActive("About")} onClick={() => setActiveLink("about")}>
                 <span class="menu-text">About</span>
                 <span class="menu-text">About</span>
               </div>

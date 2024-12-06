@@ -8,6 +8,7 @@ function App() {
   const [loadTrans, setLoadTrans] = useState(false);
   const [firstLoad, setFirstLoad] = useState(false);
   const [isSecondary, setSecondary] = useState(false);
+  const [isTertary, setTertary] = useState(false);
 
   useEffect(() => {
     if (loadTrans) {
@@ -25,8 +26,9 @@ function App() {
           }}
           loadTrans={loadTrans}
           isSecondary={isSecondary}
+          isTertary={isTertary}
         />
-        <Home setSecondary={(e) => setSecondary(e)} />
+        <Home setSecondary={(e) => setSecondary(e)} setTertary={(e) => setTertary(e)} />
       </div>
     </>
   );

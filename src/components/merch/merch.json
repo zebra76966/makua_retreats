@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name": "Camisa",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/shirts1.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 2,
+    "name": "Camisa v2",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/shirts2.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 1,
+    "name": "Tote Bag",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/totebag.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 1,
+    "name": "Tote Bag v2",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/totebag2.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 1,
+    "name": "Toalla",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/toallla.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 1,
+    "name": "Termos",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/thermos1.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"],
+    "color": ["coral", "sepia"]
+  },
+  {
+    "id": 1,
+    "name": "Yoga Mat",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/mat1.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 1,
+    "name": "Gorra",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/cap1.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M"]
+  },
+  {
+    "id": 1,
+    "name": "Gorra V2",
+    "price": 50,
+    "desc": "Some random description about the merch goes here",
+    "thumb": "./assets/merch/cap2.png",
+    "images": ["./assets/merch/shirts1.png", "./assets/merch/shirts1.png", "./assets/merch/shirts1.png"],
+    "sizes": ["S", "M"]
+  }
+]

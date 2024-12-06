@@ -1,0 +1,105 @@
+.merchCard {
+  width: 100%;
+  height: 60dvh;
+  position: relative;
+  border-radius: 3em;
+  background-color: #d1a451;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.merchCard img {
+  border-radius: 2em;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.merchCard .bag {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  background-color: #222222;
+  border-radius: 100%;
+  height: 3em;
+  width: 3em;
+}
+.merchCard .bag img {
+  height: 2em;
+}
+
+.merchCard:hover {
+  scale: 1.02;
+}
+
+.merchCard .buy-now {
+  background-color: #222222;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  font-weight: 900;
+
+  width: 90%;
+  border-radius: 2em;
+}
+
+.merchCard .name {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background-color: #222222;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+}
+.merchCard .price {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  color: #222222;
+  background-color: #d1a451;
+  border-radius: 2em;
+  border: 3px dashed #222222;
+  padding: 0.5em 1em;
+}
+
+.h-scroll {
+  overflow: auto;
+  padding-top: 1rem;
+  white-space: nowrap;
+  padding-bottom: 2em;
+  /* -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
+  mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent); */
+}
+.slim-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.slim-scroll::-webkit-scrollbar-track {
+  background-color: rgba(99, 90, 90, 0.158);
+}
+
+.slim-scroll::-webkit-scrollbar-thumb {
+  background-color: #d1a451;
+  border-radius: 10px;
+}
+
+.h-element {
+  display: inline-block;
+  width: 25rem;
+  cursor: pointer;
+  margin-right: 2em;
+  transition: all 0.2s ease-in;
+}
+
+.h-element .card {
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease-in;
+}
+
+.h-element:hover .card {
+  border: 1px solid #00a9a5 !important;
+}

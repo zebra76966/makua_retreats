@@ -7,11 +7,16 @@ import Carousel from "./carousel";
 import ItinarySection from "./itinarySection";
 import HorizontalCar from "./horizontalCar";
 import Archetypes from "./archetypes";
+import Merch from "./merch/merch";
+import Gallery from "./gallery";
 
-const Home = ({ setSecondary }) => {
+const Home = ({ setSecondary, setTertary }) => {
   const [loader, setLoader] = useState(true);
   const [isSecondary, setIsSecondary] = useState(false);
+  const [isTertary, setIsTertary] = useState(false); // State for isTertary
+
   const archetypesRef = useRef(null);
+  const merch = useRef(null);
 
   useEffect(() => {
     setTimeout(() => setLoader(false), 6000);
@@ -19,31 +24,42 @@ const Home = ({ setSecondary }) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsSecondary(entry.isIntersecting); // Toggle class based on visibility
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === archetypesRef.current) {
+            setIsSecondary(entry.isIntersecting); // Toggle for isSecondary
+          }
+          if (entry.target === merch.current) {
+            setIsTertary(entry.isIntersecting); // Toggle for isTertary
+          }
+        });
       },
       { threshold: 0.5 } // Adjust as needed
     );
+
     const archetypesElement = archetypesRef.current;
-    if (archetypesElement) {
-      observer.observe(archetypesElement);
-    }
+    const merchElement = merch.current;
+
+    if (archetypesElement) observer.observe(archetypesElement);
+    if (merchElement) observer.observe(merchElement);
 
     // Cleanup observer
     return () => {
-      if (archetypesElement) {
-        observer.unobserve(archetypesElement);
-      }
+      if (archetypesElement) observer.unobserve(archetypesElement);
+      if (merchElement) observer.unobserve(merchElement);
     };
   }, [loader]);
 
   useEffect(() => {
     setSecondary(isSecondary);
   }, [isSecondary]);
+  useEffect(() => {
+    setTertary(isTertary);
+  }, [isTertary]);
 
   return (
     <>
-      <div className={isSecondary ? "bg-primary transitionSecondary" : "bg-primary"}>
+      <div className={isSecondary ? "bg-primary transitionSecondary" : isTertary ? "bg-primary transitionTertary" : "bg-primary"}>
         <div className="w-100 d-flex align-items-center justify-content-center hero px-lg-5 px-2">
           {loader && (
             <div style={{ scale: "0.5" }} className="scaleOut">
@@ -90,7 +106,7 @@ const Home = ({ setSecondary }) => {
         </div>
 
         {!loader && (
-          <div className="container-fluid p-5 text-dark mt-5 ">
+          <div className="container-fluid p-5 text-dark mt-5 " id="about">
             <div className="row p-5 my-5">
               <motion.div className="col-lg-4 py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
                 <p className="lead py-0 my-0 fw-bold">ABOUT</p>
@@ -126,11 +142,22 @@ const Home = ({ setSecondary }) => {
               </div>
             </div>
 
-            <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
-              <h4 className="display-1 fw-bold mt-0 pt-0"> MERCH SECTION</h4>
+            <div ref={merch} className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
+              <div className="d-flex justify-content-center " style={{ width: "10%" }}>
+                <h4 className="display-1 fw-bold my-0 py-0 txtSecondary" style={{ transform: "rotate(-90deg)" }}>
+                  MERCHANDISE
+                </h4>
+              </div>
+              <div style={{ width: "90%" }}>
+                <Merch />
+              </div>
             </div>
+
             <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
-              <h4 className="display-1 fw-bold mt-0 pt-0"> GALLERY</h4>
+              <div className="w-100 ">
+                <h4 className="display-1 fw-bold mt-0 pt-0 text-center"> GALLERY</h4>
+                <Gallery />
+              </div>
             </div>
 
             <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
