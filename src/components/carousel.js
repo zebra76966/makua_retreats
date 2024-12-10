@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import "./carousel.css";
+import Frog from "./motions/logo/frog/frog";
 const Carousel = () => {
   const [active, setActive] = useState(0);
   const intervalRef = useRef(null); // Reference to store the interval
@@ -26,7 +27,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="row mt-5 pt-5 w-100 " style={{ height: "80dvh" }}>
+    <div className="row mt-5 pt-5 w-100 position-relative" style={{ height: "80dvh" }}>
       <div className="col-lg-4">
         <div className="carousel-custom w-100">
           <motion.div className="py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
@@ -81,6 +82,10 @@ const Carousel = () => {
           <img src="./assets/retreats/car1.png" className={`card-img  ${active == 0 && "inactive"}  ${active == 4 && "active"} `} />
         </div>
       </motion.div>
+
+      <div className="frog-jump-down d-flex">
+        <Frog isPattern={true} />
+      </div>
     </div>
   );
 };

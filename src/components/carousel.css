@@ -141,3 +141,15 @@
 .carButton:hover {
   scale: 1.1;
 }
+
+.frog-jump-down {
+  position: absolute;
+  z-index: 0;
+  top: -5%;
+  left: 10%;
+  width: 600px;
+  mix-blend-mode: darken;
+
+  height: 150px;
+  /* transform: rotate(45deg); */
+}
