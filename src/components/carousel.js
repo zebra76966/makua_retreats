@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import "./carousel.css";
-import Frog from "./motions/logo/frog/frog";
+
+import DiveFrog from "./motions/logo/frog/diveFrog copy";
 const Carousel = () => {
   const [active, setActive] = useState(0);
+
   const intervalRef = useRef(null); // Reference to store the interval
 
   const startInterval = () => {
@@ -26,8 +28,44 @@ const Carousel = () => {
     return () => clearInterval(intervalRef.current); // Cleanup on unmount
   }, []);
 
+  // =================>
+  const [inView, setInView] = useState(false);
+  const [fadeView, setFadeView] = useState(false);
+  const [loader, setLoader] = useState(true);
+
+  const car = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => setLoader(false), 6000);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === car.current) {
+            setTimeout(() => setFadeView(entry.isIntersecting), 1000);
+            setTimeout(() => setInView(entry.isIntersecting), 1500);
+            // Toggle for isSecondary
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust as needed
+    );
+
+    const merchElement = car.current;
+
+    if (merchElement) observer.observe(merchElement);
+
+    // Cleanup observer
+    return () => {
+      if (merchElement) observer.unobserve(merchElement);
+    };
+  }, [loader]);
+
   return (
-    <div className="row mt-5 pt-5 w-100 position-relative" style={{ height: "80dvh" }}>
+    <div ref={car} className="row mt-5 pt-5 w-100 position-relative" style={{ height: "80dvh" }}>
+      {console.log("INVIEW:", inView)}
       <div className="col-lg-4">
         <div className="carousel-custom w-100">
           <motion.div className="py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
@@ -83,8 +121,8 @@ const Carousel = () => {
         </div>
       </motion.div>
 
-      <div className="frog-jump-down d-flex">
-        <Frog isPattern={true} />
+      <div className={`frog-jump-down d-flex ${fadeView ? "fadeIns" : ""}`}>
+        <DiveFrog isClicked={inView} isPattern={false} />
       </div>
     </div>
   );

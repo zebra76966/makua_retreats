@@ -1,0 +1,36 @@
+[
+  { "id": 1, "icon": "./assets/leaf.svg", "name": "Ayahuasca", "info": "A powerful Amazonian plant medicine used for deep healing and spiritual growth." },
+  { "id": 2, "icon": "./assets/cup-hot.svg", "name": "Cacao", "info": "A sacred, heart-opening plant used in ceremonies to promote emotional clarity and connection." },
+  { "id": 3, "icon": "./assets/heart-pulse.svg", "name": "Health and Wellness", "info": "Our Health and Wellness Retreat offers a rejuvenating escape to restore mind, body, and soul." },
+  { "id": 4, "icon": "./assets/medal-star.svg", "name": "Veterans", "info": "Our Veteran Retreat combines holistic therapies, recreation, and camaraderie to help veterans heal." },
+  {
+    "id": 5,
+    "icon": "./assets/mushroom.svg",
+    "name": "Psilocybin",
+    "info": "Explore consciousness with guided psilocybin journeys that encourage self-discovery, healing, and a deepened connection to nature."
+  },
+  {
+    "id": 6,
+    "icon": "./assets/hands-holding-heart.svg",
+    "name": "Spiritual",
+    "info": "Immerse yourself in transformative practices that guide you toward inner peace, self-awareness, and a renewed spiritual connection."
+  },
+  {
+    "id": 7,
+    "icon": "./assets/male.svg",
+    "name": "Men's",
+    "info": "Join a supportive environment where men can reconnect, build resilience, and foster brotherhood through shared experiences and growth."
+  },
+  {
+    "id": 8,
+    "icon": "./assets/female.svg",
+    "name": "Women's",
+    "info": "Empower yourself in a nurturing space for women to heal, grow, and build meaningful connections with a focus on self-care and inner strength."
+  },
+  {
+    "id": 9,
+    "icon": "./assets/puzzle-9.svg",
+    "name": "Custom Retreats",
+    "info": "Design a personalized retreat for your group in a peaceful, supportive environment. Ideal for facilitators, coaches, and organizations seeking a tailored experience."
+  }
+]

@@ -11,6 +11,9 @@ import Merch from "./merch/merch";
 import Gallery from "./gallery";
 import Frog from "./motions/logo/frog/frog";
 import Pattern from "./extras/pattern";
+import Faqs from "./faqs";
+import RetreatCards from "./retreats";
+import Footer from "./footer";
 
 const Home = ({ setSecondary, setTertary }) => {
   const [loader, setLoader] = useState(true);
@@ -19,6 +22,7 @@ const Home = ({ setSecondary, setTertary }) => {
 
   const archetypesRef = useRef(null);
   const merch = useRef(null);
+  const retreatsRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => setLoader(false), 6000);
@@ -34,6 +38,9 @@ const Home = ({ setSecondary, setTertary }) => {
           if (entry.target === merch.current) {
             setIsTertary(entry.isIntersecting); // Toggle for isTertary
           }
+          if (entry.target === retreatsRef.current) {
+            setIsTertary(entry.isIntersecting); // Toggle for isSecondary
+          }
         });
       },
       { threshold: 0.5 } // Adjust as needed
@@ -41,14 +48,17 @@ const Home = ({ setSecondary, setTertary }) => {
 
     const archetypesElement = archetypesRef.current;
     const merchElement = merch.current;
+    const faqsElement = retreatsRef.current;
 
     if (archetypesElement) observer.observe(archetypesElement);
     if (merchElement) observer.observe(merchElement);
+    if (faqsElement) observer.observe(faqsElement);
 
     // Cleanup observer
     return () => {
       if (archetypesElement) observer.unobserve(archetypesElement);
       if (merchElement) observer.unobserve(merchElement);
+      if (faqsElement) observer.unobserve(faqsElement);
     };
   }, [loader]);
 
@@ -168,11 +178,29 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
+              <div ref={retreatsRef} className="w-100    mt-5 pt-5">
                 <div className="w-100 ">
-                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center"> ADDITONAL INFO/EXTRAS</h4>
+                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary"> RETREATS</h4>
+
+                  <div className="w-100 mt-5">
+                    <RetreatCards />
+                  </div>
                 </div>
               </div>
+
+              <div className="w-100 d-flex align-items-center justify-content-center py-5 my-5" style={{ minHeight: "100dvh" }}>
+                <div className="w-100 ">
+                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center"> FAQs</h4>
+
+                  <div className="w-100 mt-5">
+                    <Faqs />
+                  </div>
+                </div>
+              </div>
+
+              <Pattern />
+
+              <Footer />
             </div>
 
             <div className={`wrapper-help bg-primary ${needHelp ? "transiton-scaledown" : ""}`} onClick={() => setNeedHelp(!needHelp)}>

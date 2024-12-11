@@ -145,11 +145,21 @@
 .frog-jump-down {
   position: absolute;
   z-index: 0;
-  top: -5%;
-  left: 10%;
-  width: 600px;
-  mix-blend-mode: darken;
+  top: 3%;
+  cursor: none;
+  left: 15%;
+  width: 50dvw;
+  height: 70dvh;
 
-  height: 150px;
+  mix-blend-mode: darken;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  /* border: 1px solid black; */
+
+  /* height: 150px; */
   /* transform: rotate(45deg); */
+}
+
+.frog-jump-down.fadeIns {
+  opacity: 1;
 }
