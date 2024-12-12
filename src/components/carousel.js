@@ -65,10 +65,9 @@ const Carousel = () => {
 
   return (
     <div ref={car} className="row mt-5 pt-5 w-100 position-relative" style={{ height: "80dvh" }}>
-      {console.log("INVIEW:", inView)}
       <div className="col-lg-4">
         <div className="carousel-custom w-100">
-          <motion.div className="py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
+          <motion.div className="py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
             <p className="lead py-0 my-0 fw-bold">WHY</p>
             <h4 className="display-1 fw-bold mt-0 pt-0"> MAKUA?</h4>
 

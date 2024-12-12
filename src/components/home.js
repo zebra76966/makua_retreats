@@ -14,6 +14,7 @@ import Pattern from "./extras/pattern";
 import Faqs from "./faqs";
 import RetreatCards from "./retreats";
 import Footer from "./footer";
+import FeedBack from "./forms/feedback";
 
 const Home = ({ setSecondary, setTertary }) => {
   const [loader, setLoader] = useState(true);
@@ -76,7 +77,7 @@ const Home = ({ setSecondary, setTertary }) => {
       <div className={isSecondary ? "bg-primary transitionSecondary" : isTertary ? "bg-primary transitionTertary" : "bg-primary"}>
         <div className="w-100 d-flex align-items-center justify-content-center hero px-lg-5 px-2">
           {loader && (
-            <div style={{ scale: "0.5" }} className="scaleOut">
+            <div style={{ scale: "0.5" }} className="scaleOutt">
               <AnimEye />
 
               <h6 className="display-4 quicks-font text-center expandText fadeIn">makua</h6>
@@ -171,14 +172,14 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
+              <div className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }} id="Resort">
                 <div className="w-100 ">
                   <h4 className="display-1 fw-bold mt-0 pt-0 text-center"> GALLERY</h4>
                   <Gallery />
                 </div>
               </div>
 
-              <div ref={retreatsRef} className="w-100    mt-5 pt-5">
+              <div ref={retreatsRef} className="w-100    mt-5 pt-5" id="experience">
                 <div className="w-100 ">
                   <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary"> RETREATS</h4>
 
@@ -188,7 +189,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div className="w-100 d-flex align-items-center justify-content-center py-5 my-5" style={{ minHeight: "100dvh" }}>
+              <div className="w-100 d-flex align-items-center justify-content-center py-5 my-5" style={{ minHeight: "100dvh" }} id="faqs">
                 <div className="w-100 ">
                   <h4 className="display-1 fw-bold mt-0 pt-0 text-center"> FAQs</h4>
 
@@ -220,6 +221,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 <Frog isClicked={needHelp} isPattern={false} />
               </div>
             </div>
+            {needHelp && <FeedBack />}
           </>
         )}
       </div>

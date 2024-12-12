@@ -224,7 +224,7 @@ body {
 .menu-text {
   font-family: "Quicksand";
 
-  font-size: 5.5vw;
+  font-size: 5vw;
   margin: 0;
   color: #222222;
   text-transform: uppercase;
@@ -425,6 +425,16 @@ body {
 }
 .footer-elem .inner {
   border-radius: 1.7em;
+}
+.footer-elem a,
+.footer-elem i {
+  transition: all 0.2s ease-in;
+}
+.footer-elem a:hover {
+  scale: 1.05;
+}
+.footer-elem i:hover {
+  scale: 1.2;
 }
 
 /* Accordions */
