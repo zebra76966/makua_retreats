@@ -10,7 +10,9 @@ const Pattern = () => {
         <img src="./assets/reeds.svg" className="log2" />
         <Frog delay={2000} isPattern={true} />
         <img src="./assets/reeds.svg" className="log3" />
-        <Frog isPattern={true} />
+        <div className="d-lg-inline d-none">
+          <Frog isPattern={true} />
+        </div>
         <img src="./assets/reeds.svg" className="log4" />
       </div>
     </div>

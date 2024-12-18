@@ -6,7 +6,7 @@ const RetreatCards = () => {
     <div className="row">
       {cardsData.map((ini, i) => {
         return (
-          <div className="col-lg-3 mb-4 mx-auto" key={ini.id}>
+          <div className="col-lg-3 col-md-6 mb-4 mx-auto" key={ini.id}>
             <div class="card w-100 txtSecondary card-retreats h-100">
               <div class="card-body">
                 <img src={`${ini.icon}`} height={80} />

@@ -136,7 +136,7 @@
   scale: 1.4;
 }
 
-.fadeOut {
+.archCard.fadeOut {
   animation: 1s fadeOut ease-out forwards;
 }
 
@@ -168,9 +168,80 @@
     margin-bottom: 2em;
   }
   .archCardBox {
-    width: 80dvw;
+    width: 100%;
     transition: all 2.5s ease-in-out;
     position: relative;
     height: 100%;
+  }
+  .secArchtypes {
+    height: 100% !important;
+  }
+  .archCard.active {
+    position: static;
+    scale: 1.02;
+    height: 72dvh;
+    animation: 1.5s imageFliper2 ease-in-out forwards;
+  }
+
+  .bgBox {
+    position: static;
+    width: 0;
+    top: 0%;
+    left: -10%;
+    z-index: 77;
+    height: 65dvh;
+    transform: none;
+    opacity: 0;
+    border-radius: 2em;
+    animation: 1.5s scaleIn2 2s ease-in-out forwards;
+    background-color: #222222;
+  }
+  .bgBox .txtContent {
+    width: 100%;
+    margin-left: auto;
+  }
+}
+
+@keyframes imageFliper2 {
+  0% {
+    transform: rotateY(0deg);
+
+    border: 2px solid transparent;
+  }
+
+  90% {
+    transform: rotateY(360deg);
+    z-index: 80;
+    height: 35dvh;
+    width: 100%;
+    border: 2px solid transparent;
+    scale: 1.2;
+  }
+  100% {
+    top: 0%;
+    height: 35dvh;
+    width: 100%;
+    transform: rotateY(360deg);
+    z-index: 80;
+    border: 5px solid #d1a451;
+    scale: 1;
+  }
+}
+
+@keyframes scaleIn2 {
+  0% {
+    opacity: 0;
+    width: 0;
+    /* top: 100%; */
+  }
+  50% {
+    opacity: 1;
+    width: 0;
+    /* top: 50%; */
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+    /* top: 50%; */
   }
 }

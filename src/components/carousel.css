@@ -204,4 +204,14 @@
   .carfont {
     font-size: 2em !important;
   }
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -10%;
+    cursor: none;
+    left: 25%;
+  }
+  .textWrapper {
+    height: 10vh !important;
+  }
 }

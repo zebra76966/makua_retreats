@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           <div class="col-9 text-end offset-1 my-auto" style={{ mixBlendMode: "screen", filter: " sepia(0.5)" }}>
-            <img src="./assets/logo_horizontal.svg" height={100} style={{ filter: "invert(0.8)" }} />
+            <img src="./assets/logo_horizontal.svg" className="footerLogo" height={100} style={{ filter: "invert(0.8)" }} />
           </div>
         </div>
 

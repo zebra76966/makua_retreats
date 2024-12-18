@@ -103,3 +103,16 @@
 .h-element:hover .card {
   border: 1px solid #00a9a5 !important;
 }
+
+@media only screen and (max-width: 990px) {
+  .merchText {
+    width: 100% !important;
+  }
+
+  .merchText h4 {
+    transform: rotate(0) !important;
+  }
+  .merchDiv {
+    width: 100% !important;
+  }
+}

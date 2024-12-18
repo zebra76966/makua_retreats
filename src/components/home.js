@@ -49,17 +49,17 @@ const Home = ({ setSecondary, setTertary }) => {
 
     const archetypesElement = archetypesRef.current;
     const merchElement = merch.current;
-    const faqsElement = retreatsRef.current;
+    const retreatElement = retreatsRef.current;
 
     if (archetypesElement) observer.observe(archetypesElement);
     if (merchElement) observer.observe(merchElement);
-    if (faqsElement) observer.observe(faqsElement);
+    if (retreatElement) observer.observe(retreatElement);
 
     // Cleanup observer
     return () => {
       if (archetypesElement) observer.unobserve(archetypesElement);
       if (merchElement) observer.unobserve(merchElement);
-      if (faqsElement) observer.unobserve(faqsElement);
+      if (retreatElement) observer.unobserve(retreatElement);
     };
   }, [loader]);
 
@@ -149,7 +149,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 <ItinarySection />
               </div>
 
-              <div ref={archetypesRef} className="w-100 d-flex align-items-center justify-content-center mt-5 py-5 " style={{ height: "100dvh" }}>
+              <div ref={archetypesRef} className="w-100 d-lg-flex align-items-center justify-content-center mt-5 py-5 secArchtypes" style={{ height: "100dvh" }}>
                 <div>
                   <motion.div className="py-0" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                     <p className="lead py-0 my-0 fw-bold">THE</p>
@@ -161,13 +161,13 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div ref={merch} className="w-100 d-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
-                <div className="d-flex justify-content-center " style={{ width: "10%" }}>
+              <div ref={merch} className="w-100 d-lg-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
+                <div className="d-lg-flex text-center py-lg-0 py-5 justify-content-center merchText" style={{ width: "10%" }}>
                   <h4 className="display-1 fw-bold my-0 py-0 txtSecondary" style={{ transform: "rotate(-90deg)" }}>
                     MERCHANDISE
                   </h4>
                 </div>
-                <div style={{ width: "90%" }}>
+                <div className="merchDiv" style={{ width: "90%" }}>
                   <Merch />
                 </div>
               </div>
@@ -179,7 +179,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div ref={retreatsRef} className="w-100    mt-5 pt-5" id="experience">
+              <div ref={retreatsRef} className="w-100 mt-5 pt-5" id="experience">
                 <div className="w-100 ">
                   <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary"> RETREATS</h4>
 

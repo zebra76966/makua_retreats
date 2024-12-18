@@ -28,18 +28,18 @@ const Archetypes = () => {
 
   return (
     <div className={`archCardBox d-lg-flex align-items-center justify-content-between position-relative gap-3 ${active ? "active" : ""}`}>
-      <div className={`archCard shadow-lg ${active == 0 ? "active" : active !== null ? "fadeOut" : ""}`} onClick={() => setActive(0)}>
+      <div className={`archCard shadow-lg ${active == 0 ? "active" : ""}`} onClick={() => setActive(0)}>
         <img src="./assets/archetypes/hero.png" />
       </div>
-      <div className={`archCard shadow-lg ${active == 1 ? "active" : active !== null ? "fadeOut" : ""}`} onClick={() => setActive(1)}>
+      <div className={`archCard shadow-lg ${active == 1 ? "active" : (active !== null && active + 1 == 1) || (active !== null && active == 0) ? "fadeOut" : ""}`} onClick={() => setActive(1)}>
         <img src="./assets/archetypes/explorer.png" />
       </div>
-      <div className={`archCard shadow-lg ${active == 2 ? "active" : active !== null ? "fadeOut" : ""}`} onClick={() => setActive(2)}>
+      <div className={`archCard shadow-lg ${active == 2 ? "active" : (active !== null && active + 1 == 2) || (active !== null && active + 1 == 1) ? "fadeOut" : ""}`} onClick={() => setActive(2)}>
         <img src="./assets/archetypes/rebel.png" />
       </div>
 
       {active !== null && (
-        <div onClick={() => setActive(null)} className="bgBox px-2 py-5 shadow mx-0">
+        <div onClick={() => setActive(null)} className="bgBox px-lg-2 px-3 px-md-4 py-5 shadow mx-0">
           <div className="txtContent txtSecondary">
             <motion.div className="col-lg-4 py-5" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 2.5 }}>
               <p className="lead py-0 my-0 fw-bold">THE</p>
