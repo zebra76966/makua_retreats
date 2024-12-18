@@ -152,3 +152,25 @@
     display: none;
   }
 }
+
+@media only screen and (max-width: 990px) {
+  .archCard {
+    position: static;
+    height: 72dvh;
+    width: 100%;
+    padding: 1em;
+    background-color: #222222;
+    border-radius: 2em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: scale 0.2s ease-in;
+    animation: 2s float ease-in-out infinite;
+    margin-bottom: 2em;
+  }
+  .archCardBox {
+    width: 80dvw;
+    transition: all 2.5s ease-in-out;
+    position: relative;
+    height: 100%;
+  }
+}

@@ -27,7 +27,7 @@ const Archetypes = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <div className={`archCardBox d-flex align-items-center justify-content-between position-relative gap-3 ${active ? "active" : ""}`}>
+    <div className={`archCardBox d-lg-flex align-items-center justify-content-between position-relative gap-3 ${active ? "active" : ""}`}>
       <div className={`archCard shadow-lg ${active == 0 ? "active" : active !== null ? "fadeOut" : ""}`} onClick={() => setActive(0)}>
         <img src="./assets/archetypes/hero.png" />
       </div>

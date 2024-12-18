@@ -64,7 +64,7 @@ const Carousel = () => {
   }, [loader]);
 
   return (
-    <div ref={car} className="row mt-5 pt-5 w-100 position-relative" style={{ height: "80dvh" }}>
+    <div ref={car} className="row mt-5 pt-5 w-100 position-relative carRow" style={{ height: "80dvh" }}>
       <div className="col-lg-4">
         <div className="carousel-custom w-100">
           <motion.div className="py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
@@ -73,32 +73,32 @@ const Carousel = () => {
 
             <div style={{ height: "5vw" }}>
               {active == 0 && (
-                <motion.p className="lead quicks-font  fs-1 w-100 my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                <motion.p className="lead quicks-font  fs-1 carfont w-100 my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                   A Sacred Journey to Cerro Tusa
                 </motion.p>
               )}
               {active == 1 && (
-                <motion.p className="lead quicks-font  fs-1 w-100 my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                <motion.p className="lead quicks-font  fs-1 w-100 carfont my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                   Reconnect with the Wild and Wise Within
                 </motion.p>
               )}
               {active == 2 && (
-                <motion.p className="lead quicks-font  fs-1 w-100 my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                <motion.p className="lead quicks-font  fs-1 w-100 carfont my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                   Honoring the Earth, Healing the Self
                 </motion.p>
               )}
               {active == 3 && (
-                <motion.p className="lead quicks-font  fs-1 w-100 my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                <motion.p className="lead quicks-font  fs-1 w-100 carfont my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                   Breaking Free from Trauma
                 </motion.p>
               )}
               {active == 4 && (
-                <motion.p className="lead quicks-font  fs-1 w-100 my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                <motion.p className="lead quicks-font  fs-1 w-100 carfont my-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                   More Than a Retreat – A Call to Transformation
                 </motion.p>
               )}
             </div>
-            <div className="d-flex gap-2 mt-5 pt-5">
+            <div className="d-flex gap-2 mt-5 pt-lg-5">
               <button className="btn rounded-circle bg-none border-2 border-dark p-3 carButton noFocus" onClick={() => handleButtonClick(active - 1 !== -1 ? active - 1 : 4)}>
                 <img src="./assets/arrow-left.svg" height={30} />
               </button>
@@ -111,7 +111,7 @@ const Carousel = () => {
       </div>
 
       <motion.div className="col-lg-8" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
-        <div className="cards ">
+        <div className="cards cardsCar ">
           <img src="./assets/retreats/car5.png" className={`card-img ${active == 1 && "inactive"}  ${active == 0 && "active"}  `} />
           <img src="./assets/retreats/car6.png" className={`card-img  ${active == 2 && "inactive"}  ${active == 1 && "active"} `} />
           <img src="./assets/retreats/car4.png" className={`card-img  ${active == 3 && "inactive"}  ${active == 2 && "active"} `} />

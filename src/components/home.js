@@ -124,7 +124,7 @@ const Home = ({ setSecondary, setTertary }) => {
           <>
             <div className="container-fluid p-5 text-dark mt-5 " id="about">
               <Pattern />
-              <div className="row p-5 my-5 ">
+              <div className="row p-lg-5 my-5 ">
                 <motion.div className="col-lg-4 py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
                   <p className="lead py-0 my-0 fw-bold">ABOUT</p>
                   <h4 className="display-1 fw-bold mt-0 pt-0"> MAKUA</h4>
@@ -141,11 +141,11 @@ const Home = ({ setSecondary, setTertary }) => {
             </div>
 
             <div className="container-fluid p-5 text-dark">
-              <div className="p-5 my-2">
+              <div className="p-lg-5 my-2">
                 <Carousel />
               </div>
 
-              <div className="p-5 my-2 d-none">
+              <div className="p-lg-5 my-2 d-none">
                 <ItinarySection />
               </div>
 
