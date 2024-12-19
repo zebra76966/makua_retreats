@@ -51,7 +51,7 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
           </button>
 
           <div class="vavBrand " id="navbarSupportedContent">
-            <a class="navbar-brand2 ms-lg-auto mx-auto ps-lg-5 float" href="#">
+            <a class="navbar-brand2 ms-lg-auto me-lg-0  me-auto ms-auto  ps-lg-5 float" href="#">
               <img src="./assets/frog-outline.svg" className="ms-md-5 ps-md-5 mx-auto" height={50} />
             </a>
 

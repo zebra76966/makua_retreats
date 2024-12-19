@@ -448,6 +448,8 @@ body {
 .vavBrand {
   display: flex !important;
   flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
 }
 
 @media only screen and (max-width: 992px) {
@@ -490,6 +492,7 @@ body {
     display: flex !important;
     flex-basis: auto;
     width: 65%;
+    flex-grow: 0;
   }
 }
 @media only screen and (max-width: 768px) {
