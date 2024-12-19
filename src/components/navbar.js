@@ -50,16 +50,16 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
             {!fullNav ? <img src="./assets/bars-thin.svg" height={50} /> : <img src="./assets/xmark-light.svg" height={50} />}
           </button>
 
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <a class="navbar-brand2 ms-auto ps-5 float" href="#">
-              <img src="./assets/frog-outline.svg" className="ms-5 ps-5" height={50} />
+          <div class="vavBrand " id="navbarSupportedContent">
+            <a class="navbar-brand2 ms-lg-auto mx-auto ps-lg-5 float" href="#">
+              <img src="./assets/frog-outline.svg" className="ms-md-5 ps-md-5 mx-auto" height={50} />
             </a>
 
             <div class="d-flex ms-auto gap-2">
               <button className="btn  bg-dark text-primary bg-dark text-primary rounded-0 p-2 btn-lg">
                 <AnimEyeInfinte />
               </button>
-              <button className="btn btn-dark px-5 bg-dark text-primary rounded-0 p-2 btn-lg">RESERVE</button>
+              <button className="btn btn-dark px-lg-5 px-2 bg-dark text-primary rounded-0 p-2 btn-lg">RESERVE</button>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
 
       {fullNav && (
         <div
-          className={`w-100 p-md-5 position-fixed  ${isSecondary ? "bg-primary transitionSecondary" : isTertary ? "bg-primary transitionSecondary" : "bg-primary"}`}
+          className={`w-100 p-md-5 position-fixed d-flex align-items-center  ${isSecondary ? "bg-primary transitionSecondary" : isTertary ? "bg-primary transitionSecondary" : "bg-primary"}`}
           style={{ height: "100dvh", zIndex: 98 }}
         >
           <div class="container-fluid p-lg-5 p-2 d-lg-flex justify-content-between">
@@ -104,7 +104,7 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
                 whileInView={{ opacity: 0.7, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 src="./assets/frog-outline.svg"
-                className="my-auto"
+                className="my-auto navImgs"
                 style={{ height: "50dvh" }}
               />
             )}
@@ -114,7 +114,7 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
                 whileInView={{ opacity: 0.7, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 src="./assets/f2.png"
-                className="my-auto"
+                className="my-auto navImgs"
                 style={{ height: "50dvh" }}
               />
             )}
@@ -134,7 +134,7 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
                 whileInView={{ opacity: 0.7, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 src="./assets/f1.png"
-                className="my-auto"
+                className="my-auto navImgs"
                 style={{ height: "50dvh" }}
               />
             )}

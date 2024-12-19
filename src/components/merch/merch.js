@@ -16,7 +16,7 @@ const Merch = () => {
 
   return (
     <>
-      <div className="d-flex align-items-center justify-content-end gap-2 mb-2">
+      <div className="d-lg-flex d-none align-items-center justify-content-end gap-2 mb-2">
         <button className="btn bg-secondary txtSecondary d-flex align-items-center justify-content-center" style={{ height: "50px", width: "50px", borderRadius: "100%" }} onClick={() => scroll(-1)}>
           <img src="./assets/chevron-left-solid.svg" height={20} />
         </button>

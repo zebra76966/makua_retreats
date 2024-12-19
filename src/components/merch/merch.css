@@ -104,7 +104,7 @@
   border: 1px solid #00a9a5 !important;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 992px) {
   .merchText {
     width: 100% !important;
   }
@@ -114,5 +114,34 @@
   }
   .merchDiv {
     width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .h-element {
+    display: inline-block;
+    width: 20rem;
+    cursor: pointer;
+    margin-right: 1.3em;
+    transition: all 0.2s ease-in;
+  }
+  .merchCard {
+    width: 100%;
+    height: 55dvh;
+    position: relative;
+    border-radius: 3em;
+    background-color: #d1a451;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .merchCard .price {
+    position: absolute;
+    bottom: 13%;
+    left: 5%;
+    color: #222222;
+    background-color: #d1a451;
+    border-radius: 2em;
+    border: 3px dashed #222222;
+    padding: 0.3em 0.7em;
   }
 }

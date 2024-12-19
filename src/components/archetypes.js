@@ -41,12 +41,12 @@ const Archetypes = () => {
       {active !== null && (
         <div onClick={() => setActive(null)} className="bgBox px-lg-2 px-3 px-md-4 py-5 shadow mx-0">
           <div className="txtContent txtSecondary">
-            <motion.div className="col-lg-4 py-5" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 2.5 }}>
+            <motion.div className="col-lg-4 py-lg-5 py-3" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 3.5 }}>
               <p className="lead py-0 my-0 fw-bold">THE</p>
               <h4 className="display-1 fw-bold mt-0 pt-0"> {archetypes[active].name}</h4>
             </motion.div>
 
-            <motion.p className="quicks-font  fs-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 3 }}>
+            <motion.p className="quicks-font  fs-4" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 4 }}>
               {archetypes[active].about}
             </motion.p>
 

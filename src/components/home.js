@@ -122,15 +122,15 @@ const Home = ({ setSecondary, setTertary }) => {
 
         {!loader && (
           <>
-            <div className="container-fluid p-5 text-dark mt-5 " id="about">
+            <div className="container-fluid p-lg-5 p-2 text-dark mt-5 " id="about">
               <Pattern />
-              <div className="row p-lg-5 my-5 ">
-                <motion.div className="col-lg-4 py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
+              <div className="row p-lg-5 my-5 mx-0">
+                <motion.div className="col-lg-4 py-lg-5 py-md-3 py-2" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
                   <p className="lead py-0 my-0 fw-bold">ABOUT</p>
                   <h4 className="display-1 fw-bold mt-0 pt-0"> MAKUA</h4>
                 </motion.div>
 
-                <div className="col-lg-8 py-5 position-relative">
+                <div className="col-lg-8 py-lg-5 py-md-3 py-2 position-relative">
                   <motion.p className="lead quicks-font fw-bold fs-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                     Makua is a journey back to our roots, set in the sacred landscapes of Cerro Tusa, Colombia. Honoring the earth as the "Mother of All," we offer a sanctuary for healing, blending
                     ancient wisdom and alternative therapies. Here, veterans, seekers, and all who come can break free from cycles of trauma and rediscover purpose, strength, and light within
@@ -140,7 +140,7 @@ const Home = ({ setSecondary, setTertary }) => {
               </div>
             </div>
 
-            <div className="container-fluid p-5 text-dark">
+            <div className="container-fluid p-lg-5 p-2 text-dark">
               <div className="p-lg-5 my-2">
                 <Carousel />
               </div>
@@ -150,8 +150,8 @@ const Home = ({ setSecondary, setTertary }) => {
               </div>
 
               <div ref={archetypesRef} className="w-100 d-lg-flex align-items-center justify-content-center mt-5 py-5 secArchtypes" style={{ height: "100dvh" }}>
-                <div>
-                  <motion.div className="py-0" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+                <div className="py-lg-0 py-5">
+                  <motion.div className="py-lg-0 py-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                     <p className="lead py-0 my-0 fw-bold">THE</p>
                     <h4 className="display-2 my-0 mb-0 fw-bold"> ARCHETYPES</h4>
                   </motion.div>

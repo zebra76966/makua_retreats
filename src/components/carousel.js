@@ -64,10 +64,10 @@ const Carousel = () => {
   }, [loader]);
 
   return (
-    <div ref={car} className="row mt-5 pt-5 w-100 position-relative carRow" style={{ height: "80dvh" }}>
+    <div ref={car} className="row mt-lg-5 mt-1 pt-lg-5 pt-2 w-100 position-relative carRow" style={{ height: "80dvh" }}>
       <div className="col-lg-4">
         <div className="carousel-custom w-100">
-          <motion.div className="py-5" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
+          <motion.div className="pt-lg-5 pb-lg-5 pt-2 pb-4 " initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
             <p className="lead py-0 my-0 fw-bold">WHY</p>
             <h4 className="display-1 fw-bold mt-0 pt-0"> MAKUA?</h4>
 
@@ -98,7 +98,7 @@ const Carousel = () => {
                 </motion.p>
               )}
             </div>
-            <div className="d-flex gap-2 mt-5 pt-lg-5">
+            <div className="d-flex gap-lg-2 gap-1 mt-5 pt-lg-5">
               <button className="btn rounded-circle bg-none border-2 border-dark p-3 carButton noFocus" onClick={() => handleButtonClick(active - 1 !== -1 ? active - 1 : 4)}>
                 <img src="./assets/arrow-left.svg" height={30} />
               </button>

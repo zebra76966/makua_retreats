@@ -3,9 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer-elem p-2 mt-5">
-      <footer class=" p-md-4 inner bg-dark">
+      <footer class=" p-md-4 p-3 inner bg-dark">
         <div class="row">
-          <div class="col-2 fw-bold">
+          <div class="col-md-2 fw-bold">
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
                 <a href="#" class="nav-link p-0 text-primary">
@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="col-9 text-end offset-1 my-auto" style={{ mixBlendMode: "screen", filter: " sepia(0.5)" }}>
+          <div class="col-md-9 text-lg-end text-start offset-lg-1 py-lg-0 py-3 my-auto" style={{ mixBlendMode: "screen", filter: " sepia(0.5)" }}>
             <img src="./assets/logo_horizontal.svg" className="footerLogo" height={100} style={{ filter: "invert(0.8)" }} />
           </div>
         </div>

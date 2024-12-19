@@ -3,7 +3,7 @@ import cardsData from "./retreats.json";
 
 const RetreatCards = () => {
   return (
-    <div className="row">
+    <div className="row px-0 mx-0">
       {cardsData.map((ini, i) => {
         return (
           <div className="col-lg-3 col-md-6 mb-4 mx-auto" key={ini.id}>

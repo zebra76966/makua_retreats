@@ -153,7 +153,7 @@
   }
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 992px) {
   .archCard {
     position: static;
     height: 72dvh;
@@ -199,6 +199,65 @@
   .bgBox .txtContent {
     width: 100%;
     margin-left: auto;
+  }
+  .bgBox .txtContent .bottomEye {
+    scale: 1.2;
+    bottom: 1%;
+    right: 1%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .archCard {
+    position: static;
+    height: 72dvh;
+    width: 100%;
+    padding: 1em;
+    background-color: #222222;
+    border-radius: 2em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: scale 0.2s ease-in;
+    animation: 2s float ease-in-out infinite;
+    margin-bottom: 2em;
+  }
+  .archCardBox {
+    width: 100%;
+    transition: all 2.5s ease-in-out;
+    position: relative;
+    height: 100%;
+  }
+  .secArchtypes {
+    height: 100% !important;
+  }
+  .archCard.active {
+    position: static;
+    scale: 1.02;
+    height: 72dvh;
+    animation: 1.5s imageFliper2 ease-in-out forwards;
+  }
+
+  .bgBox {
+    position: static;
+    width: 0;
+    top: 0%;
+    left: -10%;
+    z-index: 77;
+    height: 100%;
+    transform: none;
+    opacity: 0;
+    border-radius: 2em;
+    animation: 1.5s scaleIn2 2s ease-in-out forwards;
+    background-color: #222222;
+  }
+  .bgBox .txtContent {
+    width: 100%;
+    margin-left: auto;
+  }
+  .bgBox .txtContent .quicks-font {
+    font-size: 1.1em !important;
   }
 }
 

@@ -164,6 +164,38 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 1500px) {
+  .cards .card-img {
+    border-radius: 1rem;
+    width: 100%; /* Make the image responsive to the parent element's width */
+    min-height: 60dvh; /* Ensure the height is at least 620px */
+    max-width: 30dvw; /* Optional: Limit the width */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .carfont {
+    font-size: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .cards .card-img {
+    border-radius: 1rem;
+    width: 100%; /* Make the image responsive to the parent element's width */
+    min-height: 58dvh; /* Ensure the height is at least 620px */
+    max-width: 30dvw; /* Optional: Limit the width */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .carfont {
+    font-size: 2em !important;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .cards .card-img {
     border-radius: 1rem;
@@ -180,7 +212,23 @@
   }
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 1200px) {
+  .cards .card-img {
+    border-radius: 1rem;
+    width: 100%; /* Make the image responsive to the parent element's width */
+    min-height: 55dvh; /* Ensure the height is at least 620px */
+    max-width: 32dvw; /* Optional: Limit the width */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .carfont {
+    font-size: 1.5em !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
   .cards .card-img {
     border-radius: 1rem;
     width: 100%; /* Make the image responsive to the parent element's width */
@@ -213,5 +261,80 @@
   }
   .textWrapper {
     height: 10vh !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cards .card-img {
+    border-radius: 1rem;
+    width: 100%; /* Make the image responsive to the parent element's width */
+    min-height: 100%; /* Ensure the height is at least 620px */
+    max-width: 100%; /* Optional: Limit the width */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .cardsCar {
+    height: 50dvh; /* Ensure the height is at least 620px */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carRow {
+    height: auto !important;
+  }
+  .carfont {
+    font-size: 2em !important;
+  }
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -10%;
+    cursor: none;
+    left: 25%;
+  }
+  .textWrapper {
+    height: 10vh !important;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .cards .card-img {
+    border-radius: 1rem;
+    width: 100%; /* Make the image responsive to the parent element's width */
+    min-height: 100%; /* Ensure the height is at least 620px */
+    max-width: 100%; /* Optional: Limit the width */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .cardsCar {
+    height: 50dvh; /* Ensure the height is at least 620px */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carRow {
+    height: auto !important;
+  }
+  .carfont {
+    font-size: 1.5em !important;
+  }
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -10%;
+    cursor: none;
+    left: 25%;
+  }
+  .textWrapper {
+    height: 5vh !important;
+  }
+  .carousel-custom .btn {
+    scale: 0.8;
   }
 }

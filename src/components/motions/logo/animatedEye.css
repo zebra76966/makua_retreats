@@ -342,3 +342,13 @@
     height: 0; /* Fully open again */
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .eyeContainerInfinite {
+    height: 30px;
+    width: 55px;
+    position: relative;
+    /* opacity: 0.7; */
+    overflow: hidden;
+  }
+}
