@@ -594,4 +594,7 @@ body {
   overflow: hidden;
   scale: 0.7;
 } */
+  .navbar-brand2 {
+    display: none;
+  }
 }
