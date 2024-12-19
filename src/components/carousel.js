@@ -110,7 +110,7 @@ const Carousel = () => {
         </div>
       </div>
 
-      <motion.div className="col-lg-8" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
+      <motion.div className="col-lg-8 mt-lg-0 mt-4 " initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
         <div className="cards cardsCar ">
           <img src="./assets/retreats/car5.png" className={`card-img ${active == 1 && "inactive"}  ${active == 0 && "active"}  `} />
           <img src="./assets/retreats/car6.png" className={`card-img  ${active == 2 && "inactive"}  ${active == 1 && "active"} `} />
