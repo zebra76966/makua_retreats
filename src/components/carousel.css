@@ -145,7 +145,7 @@
 .frog-jump-down {
   position: absolute;
   z-index: 0;
-  top: -120%;
+  top: -10%;
   cursor: none;
   left: 33%;
   width: 50dvw;
@@ -168,7 +168,7 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -190%;
+    top: -12%;
     cursor: none;
     left: 50%;
   }
@@ -203,7 +203,7 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -220%;
+    top: -13%;
     cursor: none;
     left: 50%;
   }
@@ -223,13 +223,13 @@
   .carfont {
     font-size: 2em !important;
   }
-  .frog-jump-down {
+  /* .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -220%;
+    top: -10%;
     cursor: none;
     left: 60%;
-  }
+  } */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -249,7 +249,7 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -250%;
+    top: -16%;
     cursor: none;
     left: 80%;
   }
@@ -279,10 +279,14 @@
   .carfont {
     font-size: 2em !important;
   }
+  .carousel-custom {
+    min-height: 400px !important;
+    max-height: 400px !important;
+  }
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -250%;
+    top: -50%;
     cursor: none;
     left: 25%;
   }
@@ -318,7 +322,7 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -260%;
+    top: -50%;
     cursor: none;
     left: 30%;
   }
@@ -354,7 +358,7 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -300%;
+    top: -50%;
     cursor: none;
     left: 35%;
   }
@@ -363,5 +367,42 @@
   }
   .carousel-custom .btn {
     scale: 0.8;
+  }
+}
+
+/* Height breakpoints */
+@media only screen and (min-width: 990px) and (max-height: 990px) {
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -10%;
+    cursor: none;
+  }
+}
+
+@media only screen and (min-width: 990px) and (max-height: 680px) {
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: 5%;
+    cursor: none;
+  }
+}
+
+@media only screen and (max-width: 990px) and (max-height: 990px) {
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -30%;
+    cursor: none;
+  }
+}
+
+@media only screen and (max-width: 990px) and (max-height: 680px) {
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -10%;
+    cursor: none;
   }
 }

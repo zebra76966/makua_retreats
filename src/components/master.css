@@ -449,6 +449,10 @@ body {
   align-items: center;
 }
 
+.pattern {
+  min-height: 200px;
+}
+
 @media only screen and (max-width: 1400px) {
   .log1 {
     opacity: 0.8;
@@ -473,6 +477,9 @@ body {
     left: 85%;
     bottom: unset;
     z-index: 2;
+  }
+  .pattern .frog-container img {
+    height: 130% !important;
   }
 }
 
