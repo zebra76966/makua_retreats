@@ -136,8 +136,9 @@
   scale: 1.4;
 }
 
-.archCard.fadeOut {
+/* .archCard.fadeOut {
   animation: 1s fadeOut ease-out forwards;
+
 }
 
 @keyframes fadeOut {
@@ -151,6 +152,26 @@
     opacity: 0;
     display: none;
   }
+} */
+
+.archCard {
+  transition: opacity 0.3s ease, display 0.3s ease allow-discrete; /* <-- check this line */
+
+  &.fadeOut {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@starting-style {
+  /* <-- and this line */
+  .archCard.fadeOut {
+    opacity: 1;
+  }
+}
+
+.bgBox .txtContent .quicks-font {
+  font-size: 2.5dvh !important;
 }
 
 @media only screen and (max-width: 992px) {
@@ -256,9 +277,9 @@
     width: 100%;
     margin-left: auto;
   }
-  .bgBox .txtContent .quicks-font {
+  /* .bgBox .txtContent .quicks-font {
     font-size: 1.1em !important;
-  }
+  } */
 }
 
 @keyframes imageFliper2 {

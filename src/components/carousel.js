@@ -68,8 +68,14 @@ const Carousel = () => {
       <div className="col-lg-4">
         <div className="carousel-custom w-100">
           <motion.div className="pt-lg-5 pb-lg-5 pt-2 pb-4 " initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
-            <p className="lead py-0 my-0 fw-bold">WHY</p>
-            <h4 className="display-1 fw-bold mt-0 pt-0"> MAKUA?</h4>
+            <div className="position-relative" style={{ height: "10dvh" }}>
+              <p className="lead py-0 my-0 fw-bold">WHY</p>
+              <h4 className="display-1 fw-bold mt-0 pt-0"> MAKUA?</h4>
+
+              <div className={`frog-jump-down d-flex ${fadeView ? "fadeIns" : ""}`}>
+                <DiveFrog isClicked={false} isPattern={false} />
+              </div>
+            </div>
 
             <div className="textWrapper" style={{ height: "5vw" }}>
               {active == 0 && (
@@ -119,10 +125,6 @@ const Carousel = () => {
           <img src="./assets/retreats/car1.png" className={`card-img  ${active == 0 && "inactive"}  ${active == 4 && "active"} `} />
         </div>
       </motion.div>
-
-      <div className={`frog-jump-down d-flex ${fadeView ? "fadeIns" : ""}`}>
-        <DiveFrog isClicked={inView} isPattern={false} />
-      </div>
     </div>
   );
 };

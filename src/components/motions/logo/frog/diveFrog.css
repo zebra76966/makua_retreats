@@ -22,3 +22,9 @@
 .divefrog-container img.active {
   opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  .divefrog-container img {
+    width: 150%;
+  }
+}

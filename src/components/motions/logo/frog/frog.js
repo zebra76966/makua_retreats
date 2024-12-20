@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./frog.css";
 
-const Frog = ({ delay = 0, isPattern = true, isClicked }) => {
+const Frog = ({ delay = 0, isPattern = true, isClicked, hide }) => {
   const [active, setActive] = useState(isPattern ? 0 : 12);
   const [isRunning, setIsRunning] = useState(isPattern); // Tracks whether the animation should run
 
@@ -41,7 +41,7 @@ const Frog = ({ delay = 0, isPattern = true, isClicked }) => {
   }, [isClicked]);
 
   return (
-    <div className="frog-container">
+    <div className={`frog-container  ${hide ? "d-xxl-block d-none" : ""} `}>
       <img src="./assets/vfrog/0A.svg" className={`${active === 0 ? "active" : ""}`} alt="Frog Frame 1" />
       <img src="./assets/vfrog/0B.svg" className={`${active === 1 ? "active" : ""}`} alt="Frog Frame 2" />
       {[...Array(22)].map((_, i) => (

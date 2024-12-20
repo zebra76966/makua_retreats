@@ -149,7 +149,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 <ItinarySection />
               </div>
 
-              <div ref={archetypesRef} className="w-100 d-lg-flex align-items-center justify-content-center mt-5 py-5 secArchtypes" style={{ height: "100dvh", overflowX: "hidden" }}>
+              <div ref={archetypesRef} className="w-100 d-lg-flex align-items-center justify-content-center mt-5 py-5 secArchtypes" style={{ height: "100dvh", overflow: "hidden" }}>
                 <div className="py-lg-0 py-5">
                   <motion.div className="py-lg-0 py-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                     <p className="lead py-0 my-0 fw-bold">THE</p>
@@ -179,9 +179,9 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div ref={retreatsRef} className="w-100 mt-5 pt-5" id="experience">
+              <div ref={retreatsRef} className="w-100 mt-5 pt-5 experience" id="experience">
                 <div className="w-100 ">
-                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary"> RETREATS</h4>
+                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary position-relative"> RETREATS</h4>
 
                   <div className="w-100 mt-5">
                     <RetreatCards />

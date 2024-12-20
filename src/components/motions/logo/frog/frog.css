@@ -22,6 +22,15 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 1400px) {
+  .frog-container {
+    width: 100%;
+    height: 23dvh;
+    position: relative;
+    /* overflow: hidden; */
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .frog-container {
     width: 100%;

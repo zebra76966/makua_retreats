@@ -145,9 +145,9 @@
 .frog-jump-down {
   position: absolute;
   z-index: 0;
-  top: 3%;
+  top: -120%;
   cursor: none;
-  left: 15%;
+  left: 33%;
   width: 50dvw;
   height: 70dvh;
 
@@ -164,11 +164,33 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 1800px) {
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -190%;
+    cursor: none;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .cards .card-img {
+    border-radius: 1rem;
+    width: 100%; /* Make the image responsive to the parent element's width */
+    /* min-height: 60dvh; Ensure the height is at least 620px */
+    max-width: 30dvw; /* Optional: Limit the width */
+    object-fit: cover; /* Ensure the image covers the area */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
 @media only screen and (max-width: 1500px) {
   .cards .card-img {
     border-radius: 1rem;
     width: 100%; /* Make the image responsive to the parent element's width */
-    min-height: 60dvh; /* Ensure the height is at least 620px */
+    /* min-height: 60dvh; Ensure the height is at least 620px */
     max-width: 30dvw; /* Optional: Limit the width */
     object-fit: cover; /* Ensure the image covers the area */
     position: absolute;
@@ -178,13 +200,20 @@
   .carfont {
     font-size: 2em !important;
   }
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -220%;
+    cursor: none;
+    left: 50%;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
   .cards .card-img {
     border-radius: 1rem;
     width: 100%; /* Make the image responsive to the parent element's width */
-    min-height: 58dvh; /* Ensure the height is at least 620px */
+    /* min-height: 60dvh; Ensure the height is at least 620px */
     max-width: 30dvw; /* Optional: Limit the width */
     object-fit: cover; /* Ensure the image covers the area */
     position: absolute;
@@ -194,21 +223,12 @@
   .carfont {
     font-size: 2em !important;
   }
-}
-
-@media only screen and (max-width: 1400px) {
-  .cards .card-img {
-    border-radius: 1rem;
-    width: 100%; /* Make the image responsive to the parent element's width */
-    min-height: 60dvh; /* Ensure the height is at least 620px */
-    max-width: 32dvw; /* Optional: Limit the width */
-    object-fit: cover; /* Ensure the image covers the area */
+  .frog-jump-down {
     position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-  .carfont {
-    font-size: 2em !important;
+    z-index: 0;
+    top: -220%;
+    cursor: none;
+    left: 60%;
   }
 }
 
@@ -216,8 +236,8 @@
   .cards .card-img {
     border-radius: 1rem;
     width: 100%; /* Make the image responsive to the parent element's width */
-    min-height: 55dvh; /* Ensure the height is at least 620px */
-    max-width: 32dvw; /* Optional: Limit the width */
+    /* min-height: 55dvh; Ensure the height is at least 620px */
+    max-width: 30dvw; /* Optional: Limit the width */
     object-fit: cover; /* Ensure the image covers the area */
     position: absolute;
     top: 50%;
@@ -225,6 +245,13 @@
   }
   .carfont {
     font-size: 1.5em !important;
+  }
+  .frog-jump-down {
+    position: absolute;
+    z-index: 0;
+    top: -250%;
+    cursor: none;
+    left: 80%;
   }
 }
 
@@ -255,7 +282,7 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -10%;
+    top: -250%;
     cursor: none;
     left: 25%;
   }
@@ -291,9 +318,9 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -10%;
+    top: -260%;
     cursor: none;
-    left: 25%;
+    left: 30%;
   }
   .textWrapper {
     height: 10vh !important;
@@ -327,9 +354,9 @@
   .frog-jump-down {
     position: absolute;
     z-index: 0;
-    top: -10%;
+    top: -300%;
     cursor: none;
-    left: 25%;
+    left: 35%;
   }
   .textWrapper {
     height: 5vh !important;
