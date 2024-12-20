@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./frog.css";
+import { use } from "react";
 
 const Frog = ({ delay = 0, isPattern = true, isClicked, hide }) => {
   const [active, setActive] = useState(isPattern ? 0 : 12);
@@ -40,8 +41,17 @@ const Frog = ({ delay = 0, isPattern = true, isClicked, hide }) => {
     setActive(12);
   }, [isClicked]);
 
+  useEffect(() => {
+    if (isPattern && delay && delay > 0) {
+      setActive(0);
+      console.log("delay", delay);
+    }
+
+    console.log("active", active);
+  }, [delay, isPattern]);
+
   return (
-    <div className={`frog-container  ${hide ? "d-xxl-block d-none" : ""} `}>
+    <div className={`frog-container  ${hide ? "d-xxl-block d-none" : ""} ${delay ? "opacityIn" : ""} `}>
       <img src="./assets/vfrog/0A.svg" className={`${active === 0 ? "active" : ""}`} alt="Frog Frame 1" />
       <img src="./assets/vfrog/0B.svg" className={`${active === 1 ? "active" : ""}`} alt="Frog Frame 2" />
       {[...Array(22)].map((_, i) => (
