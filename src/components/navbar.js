@@ -56,10 +56,12 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
             </a>
 
             <div class="d-flex ms-auto gap-2">
-              <button className="btn  bg-dark text-primary bg-dark text-primary rounded-0 p-2 btn-lg">
+              <a href="#" className="btn  bg-dark text-primary bg-dark text-primary rounded-0 p-2 btn-lg">
                 <AnimEyeInfinte />
-              </button>
-              <button className="btn btn-dark px-lg-5 px-2 bg-dark text-primary rounded-0 p-2 btn-lg">RESERVE</button>
+              </a>
+              <a href="mailto:contact@makuaretreats.com" className="btn btn-dark px-lg-5 px-2 bg-dark text-primary rounded-0 p-2 btn-lg">
+                RESERVE
+              </a>
             </div>
           </div>
         </div>
@@ -143,6 +145,18 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
             ) : (
               ""
             )}
+          </div>
+
+          <div className="position-fixed bottom-0 start-0 p-3 w-100 d-flex justify-content-start justify-content-lg-center" style={{ zIndex: "99" }}>
+            <div className="d-md-flex gap-3">
+              <a
+                href="tel:+1 (774) 647-4263"
+                class="d-flex gap-2 align-items-center nav-link p-0 text-dark border-dashed border-2 fw-bold fs-5  border-dark rounded-3 px-3 py-2"
+                style={{ borderStyle: "dashed" }}
+              >
+                <img src="assets/telephone.svg" height={20} style={{ filter: "invert(1)" }} /> +1 (774) 647-4263
+              </a>
+            </div>
           </div>
         </div>
       )}

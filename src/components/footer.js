@@ -8,28 +8,33 @@ const Footer = () => {
           <div class="col-md-2 fw-bold">
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-primary">
+                <a href="#home" class="nav-link p-0 text-primary">
                   Home
                 </a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-primary">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-primary">
-                  Pricing
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-primary">
-                  FAQs
-                </a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-primary">
+                <a href="#about" class="nav-link p-0 text-primary">
                   About
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#experience" class="nav-link p-0 text-primary">
+                  Experience
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#Resort" class="nav-link p-0 text-primary">
+                  Resort
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#booking" class="nav-link p-0 text-primary">
+                  Booking/Prices
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#faqs" class="nav-link p-0 text-primary">
+                  Faqs
                 </a>
               </li>
             </ul>
@@ -41,16 +46,16 @@ const Footer = () => {
         </div>
 
         <div class=" py-4 my-4 border-top border-primary text-primary">
-          <p className="fw-bold">© 2024 Company, Inc. All rights reserved.</p>
+          <p className="fw-bold">© 2024 Makua Retreats. All rights reserved.</p>
 
           <ul class="list-unstyled d-flex ">
             <li class="">
-              <a class="link-light text-primary fs-3" href="#">
+              <a class="link-light text-primary fs-3" target="_blank" href="https://www.instagram.com/makuaretreats">
                 <i className="fa fa-instagram" />
               </a>
             </li>
             <li class="ms-3">
-              <a class="link-light text-primary fs-3" href="#">
+              <a class="link-light text-primary fs-3" target="_blank" href="https://www.facebook.com/profile.php?id=61568316370249&mibextid=ZbWKwL">
                 <i className="fa fa-facebook-square" />
               </a>
             </li>
@@ -60,6 +65,30 @@ const Footer = () => {
               </a>
             </li>
           </ul>
+          <div className="d-md-flex gap-3">
+            <a
+              href="mailto:contact@makuaretreats.com"
+              class="d-flex gap-2 align-items-center nav-link p-0 text-primary border-dashed border-2 fw-bold fs-5  border-primary rounded-3 px-3 py-2"
+              style={{ borderStyle: "dashed" }}
+            >
+              <img src="assets/envelope.svg" height={20} /> contact@makuaretreats.com
+            </a>
+
+            <a
+              href="tel:+1 (774) 647-4263"
+              class="d-flex gap-2 align-items-center nav-link p-0 text-primary border-dashed border-2 fw-bold fs-5  border-primary rounded-3 px-3 py-2"
+              style={{ borderStyle: "dashed" }}
+            >
+              <img src="assets/clock.svg" height={20} /> 09:00am — 05:00pm
+            </a>
+            <a
+              href="tel:+1 (774) 647-4263"
+              class="d-flex gap-2 align-items-center nav-link p-0 text-primary border-dashed border-2 fw-bold fs-5  border-primary rounded-3 px-3 py-2"
+              style={{ borderStyle: "dashed" }}
+            >
+              <img src="assets/telephone.svg" height={20} /> +1 (774) 647-4263
+            </a>
+          </div>
         </div>
       </footer>
     </div>

@@ -356,6 +356,7 @@
     font-size: 1.5em !important;
   }
   .frog-jump-down {
+    display: none;
     position: absolute;
     z-index: 0;
     top: -50%;
@@ -367,6 +368,10 @@
   }
   .carousel-custom .btn {
     scale: 0.8;
+  }
+  .carousel-custom {
+    min-height: 100% !important;
+    max-height: 100% !important;
   }
 }
 
