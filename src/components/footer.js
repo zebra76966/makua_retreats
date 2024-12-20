@@ -60,6 +60,16 @@ const Footer = () => {
               </a>
             </li>
             <li class="ms-3">
+              <a
+                class="link-light text-primary fs-3"
+                target="_blank"
+                href="https://www.google.com/maps/place/Cerro+Tusa+Springs/@5.9611186,-75.7554612,15z/data=!4m9!3m8!1s0x8e4661ba172d7a6b:0x9efaa753b676464d!5m2!4m1!1i2!8m2!3d5.9611186!4d-75.7554612!16s%2Fg%2F11p0z42xbz!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+              >
+                <i className="fa fa-map-marker" />
+              </a>
+            </li>
+
+            <li class="ms-3">
               <a class="link-light text-primary fs-3" href="#">
                 <i className="fa fa-linkedin-square" />
               </a>
