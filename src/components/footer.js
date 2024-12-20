@@ -79,7 +79,7 @@ const Footer = () => {
             <a
               href="mailto:contact@makuaretreats.com"
               class="d-flex gap-2 align-items-center nav-link p-0 text-primary border-dashed border-2 fw-bold fs-5  border-primary rounded-3 px-3 py-2"
-              style={{ borderStyle: "dashed" }}
+              style={{ borderStyle: "dashed", overflowWrap: "anywhere" }}
             >
               <img src="assets/envelope.svg" height={20} /> contact@makuaretreats.com
             </a>
