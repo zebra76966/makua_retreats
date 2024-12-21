@@ -13,7 +13,11 @@ const Gallery = () => {
     let isInView = false;
 
     const handleWheel = (event) => {
-      if (!container || !isInView) return;
+      // If the container is not in view, let vertical scroll be normal
+      if (!container || !isInView) {
+        lenis.start();
+        return;
+      }
 
       const isAtStartOfHorizontalScroll = container.scrollLeft <= 0;
       const isAtEndOfHorizontalScroll = container.scrollLeft + container.offsetWidth >= container.scrollWidth;
@@ -39,7 +43,7 @@ const Gallery = () => {
       ([entry]) => {
         isInView = entry.isIntersecting;
       },
-      { threshold: 0.95 } // Trigger when at least 10% of the container is visible
+      { threshold: 0.95 } // Trigger when at least 95% of the container is visible
     );
 
     if (container) {

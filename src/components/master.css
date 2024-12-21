@@ -2,6 +2,10 @@
   scroll-behavior: auto;
 }
 
+body.modal-open {
+  overflow-y: hidden !important;
+}
+
 @font-face {
   font-family: "Quicksand";
   src: url("../../public/fonts/Quicksand.ttf") format("truetype");
@@ -380,7 +384,7 @@ body {
 
 .wrapper-help {
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   right: 0%;
   bottom: 0%;
   scale: 0.8;
