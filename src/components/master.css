@@ -25,6 +25,13 @@ body::-webkit-scrollbar-thumb {
   /* border-radius: 10px; */
 }
 
+.lineClamp {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
 .thinScroll::-webkit-scrollbar {
   width: 5px;
 }
@@ -174,6 +181,14 @@ body {
 
 .txtSecondary {
   color: #d1a451 !important;
+}
+
+.borderSecondary {
+  border-color: #d1a451 !important;
+}
+
+.pricetag {
+  border-style: dashed !important;
 }
 
 .float {

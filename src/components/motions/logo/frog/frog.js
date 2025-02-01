@@ -3,7 +3,7 @@ import "./frog.css";
 import { use } from "react";
 
 const Frog = ({ delay = 0, isPattern = true, isClicked, hide }) => {
-  const [active, setActive] = useState(isPattern ? 0 : 12);
+  const [active, setActive] = useState(isPattern ? 0 : 13);
   const [isRunning, setIsRunning] = useState(isPattern); // Tracks whether the animation should run
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const Frog = ({ delay = 0, isPattern = true, isClicked, hide }) => {
   }, [isPattern, isClicked, delay]);
 
   useEffect(() => {
-    setActive(12);
+    setActive(13);
   }, [isClicked]);
 
   useEffect(() => {

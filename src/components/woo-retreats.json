@@ -1,0 +1,500 @@
+[
+  {
+    "id": 134,
+    "name": "Cacao",
+    "slug": "cacao",
+    "permalink": "https://shop.makuaretreats.com/product/cacao/",
+    "date_created": "2025-01-19T10:25:11",
+    "date_created_gmt": "2025-01-19T10:25:11",
+    "date_modified": "2025-01-19T10:25:11",
+    "date_modified_gmt": "2025-01-19T10:25:11",
+    "type": "simple",
+    "status": "publish",
+    "featured": false,
+    "catalog_visibility": "visible",
+    "description": "<p>A sacred, heart-opening plant used in ceremonies to promote emotional clarity and connection.</p>\n",
+    "short_description": "<p>A sacred, heart-opening plant used in ceremonies to promote emotional clarity and connection.</p>\n",
+    "sku": "",
+    "price": "1400",
+    "regular_price": "1400",
+    "sale_price": "",
+    "date_on_sale_from": null,
+    "date_on_sale_from_gmt": null,
+    "date_on_sale_to": null,
+    "date_on_sale_to_gmt": null,
+    "on_sale": false,
+    "purchasable": true,
+    "total_sales": 0,
+    "virtual": true,
+    "downloadable": false,
+    "downloads": [],
+    "download_limit": -1,
+    "download_expiry": -1,
+    "external_url": "",
+    "button_text": "",
+    "tax_status": "taxable",
+    "tax_class": "",
+    "manage_stock": false,
+    "stock_quantity": null,
+    "backorders": "no",
+    "backorders_allowed": false,
+    "backordered": false,
+    "low_stock_amount": null,
+    "sold_individually": false,
+    "weight": "",
+    "dimensions": {
+      "length": "",
+      "width": "",
+      "height": ""
+    },
+    "shipping_required": false,
+    "shipping_taxable": false,
+    "shipping_class": "",
+    "shipping_class_id": 0,
+    "reviews_allowed": true,
+    "average_rating": "0.00",
+    "rating_count": 0,
+    "upsell_ids": [],
+    "cross_sell_ids": [],
+    "parent_id": 0,
+    "purchase_note": "",
+    "categories": [
+      {
+        "id": 18,
+        "name": "Retreats",
+        "slug": "retreats"
+      }
+    ],
+    "tags": [
+      {
+        "id": 22,
+        "name": "cacao",
+        "slug": "cacao"
+      },
+      {
+        "id": 20,
+        "name": "retreats",
+        "slug": "retreats"
+      }
+    ],
+    "images": [
+      {
+        "id": 135,
+        "date_created": "2025-01-19T10:23:43",
+        "date_created_gmt": "2025-01-19T10:23:43",
+        "date_modified": "2025-01-19T10:23:43",
+        "date_modified_gmt": "2025-01-19T10:23:43",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/cup-hot-1.png",
+        "name": "cup-hot (1)",
+        "alt": ""
+      },
+      {
+        "id": 125,
+        "date_created": "2025-01-17T15:45:36",
+        "date_created_gmt": "2025-01-17T15:45:36",
+        "date_modified": "2025-01-17T15:45:36",
+        "date_modified_gmt": "2025-01-17T15:45:36",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car22-1.png",
+        "name": "car22",
+        "alt": ""
+      },
+      {
+        "id": 124,
+        "date_created": "2025-01-17T15:45:05",
+        "date_created_gmt": "2025-01-17T15:45:05",
+        "date_modified": "2025-01-17T15:45:05",
+        "date_modified_gmt": "2025-01-17T15:45:05",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car21.png",
+        "name": "car21",
+        "alt": ""
+      },
+      {
+        "id": 123,
+        "date_created": "2025-01-17T15:44:30",
+        "date_created_gmt": "2025-01-17T15:44:30",
+        "date_modified": "2025-01-17T15:44:30",
+        "date_modified_gmt": "2025-01-17T15:44:30",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car20.png",
+        "name": "car20",
+        "alt": ""
+      },
+      {
+        "id": 122,
+        "date_created": "2025-01-17T15:44:03",
+        "date_created_gmt": "2025-01-17T15:44:03",
+        "date_modified": "2025-01-17T15:44:03",
+        "date_modified_gmt": "2025-01-17T15:44:03",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car19.png",
+        "name": "car19",
+        "alt": ""
+      },
+      {
+        "id": 121,
+        "date_created": "2025-01-17T15:43:32",
+        "date_created_gmt": "2025-01-17T15:43:32",
+        "date_modified": "2025-01-17T15:43:32",
+        "date_modified_gmt": "2025-01-17T15:43:32",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car18.png",
+        "name": "car18",
+        "alt": ""
+      },
+      {
+        "id": 120,
+        "date_created": "2025-01-17T15:42:57",
+        "date_created_gmt": "2025-01-17T15:42:57",
+        "date_modified": "2025-01-17T15:42:57",
+        "date_modified_gmt": "2025-01-17T15:42:57",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car17.png",
+        "name": "car17",
+        "alt": ""
+      },
+      {
+        "id": 119,
+        "date_created": "2025-01-17T15:42:22",
+        "date_created_gmt": "2025-01-17T15:42:22",
+        "date_modified": "2025-01-17T15:42:22",
+        "date_modified_gmt": "2025-01-17T15:42:22",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car16.png",
+        "name": "car16",
+        "alt": ""
+      },
+      {
+        "id": 118,
+        "date_created": "2025-01-17T15:41:38",
+        "date_created_gmt": "2025-01-17T15:41:38",
+        "date_modified": "2025-01-17T15:41:38",
+        "date_modified_gmt": "2025-01-17T15:41:38",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car15.png",
+        "name": "car15",
+        "alt": ""
+      },
+      {
+        "id": 117,
+        "date_created": "2025-01-17T15:41:15",
+        "date_created_gmt": "2025-01-17T15:41:15",
+        "date_modified": "2025-01-17T15:41:15",
+        "date_modified_gmt": "2025-01-17T15:41:15",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car14.png",
+        "name": "car14",
+        "alt": ""
+      },
+      {
+        "id": 116,
+        "date_created": "2025-01-17T15:40:35",
+        "date_created_gmt": "2025-01-17T15:40:35",
+        "date_modified": "2025-01-17T15:40:35",
+        "date_modified_gmt": "2025-01-17T15:40:35",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car13.png",
+        "name": "car13",
+        "alt": ""
+      },
+      {
+        "id": 115,
+        "date_created": "2025-01-17T15:40:11",
+        "date_created_gmt": "2025-01-17T15:40:11",
+        "date_modified": "2025-01-17T15:40:11",
+        "date_modified_gmt": "2025-01-17T15:40:11",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car12.png",
+        "name": "car12",
+        "alt": ""
+      },
+      {
+        "id": 114,
+        "date_created": "2025-01-17T15:39:47",
+        "date_created_gmt": "2025-01-17T15:39:47",
+        "date_modified": "2025-01-17T15:39:47",
+        "date_modified_gmt": "2025-01-17T15:39:47",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car11.png",
+        "name": "car11",
+        "alt": ""
+      },
+      {
+        "id": 113,
+        "date_created": "2025-01-17T15:39:03",
+        "date_created_gmt": "2025-01-17T15:39:03",
+        "date_modified": "2025-01-17T15:39:03",
+        "date_modified_gmt": "2025-01-17T15:39:03",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car10.png",
+        "name": "car10",
+        "alt": ""
+      }
+    ],
+    "attributes": [],
+    "default_attributes": [],
+    "variations": [],
+    "grouped_products": [],
+    "menu_order": 0,
+    "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>1,400.00</bdi></span>",
+    "related_ids": [101],
+    "meta_data": [],
+    "stock_status": "instock",
+    "has_options": false,
+    "post_password": "",
+    "global_unique_id": "",
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://shop.makuaretreats.com/wp-json/wc/v3/products/134",
+          "targetHints": {
+            "allow": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://shop.makuaretreats.com/wp-json/wc/v3/products"
+        }
+      ]
+    }
+  },
+  {
+    "id": 101,
+    "name": "Ayahuasca",
+    "slug": "ayahuasca",
+    "permalink": "https://shop.makuaretreats.com/product/ayahuasca/",
+    "date_created": "2025-01-17T15:47:02",
+    "date_created_gmt": "2025-01-17T15:47:02",
+    "date_modified": "2025-01-19T10:25:58",
+    "date_modified_gmt": "2025-01-19T10:25:58",
+    "type": "simple",
+    "status": "publish",
+    "featured": false,
+    "catalog_visibility": "visible",
+    "description": "<p>A powerful Amazonian plant medicine used for deep healing and spiritual growth.</p>\n",
+    "short_description": "<p>A powerful Amazonian plant medicine used for deep healing and spiritual growth.</p>\n",
+    "sku": "",
+    "price": "1200",
+    "regular_price": "1200",
+    "sale_price": "",
+    "date_on_sale_from": null,
+    "date_on_sale_from_gmt": null,
+    "date_on_sale_to": null,
+    "date_on_sale_to_gmt": null,
+    "on_sale": false,
+    "purchasable": true,
+    "total_sales": 0,
+    "virtual": true,
+    "downloadable": false,
+    "downloads": [],
+    "download_limit": -1,
+    "download_expiry": -1,
+    "external_url": "",
+    "button_text": "",
+    "tax_status": "taxable",
+    "tax_class": "",
+    "manage_stock": false,
+    "stock_quantity": null,
+    "backorders": "no",
+    "backorders_allowed": false,
+    "backordered": false,
+    "low_stock_amount": null,
+    "sold_individually": false,
+    "weight": "",
+    "dimensions": {
+      "length": "",
+      "width": "",
+      "height": ""
+    },
+    "shipping_required": false,
+    "shipping_taxable": false,
+    "shipping_class": "",
+    "shipping_class_id": 0,
+    "reviews_allowed": true,
+    "average_rating": "0.00",
+    "rating_count": 0,
+    "upsell_ids": [],
+    "cross_sell_ids": [],
+    "parent_id": 0,
+    "purchase_note": "",
+    "categories": [
+      {
+        "id": 18,
+        "name": "Retreats",
+        "slug": "retreats"
+      }
+    ],
+    "tags": [
+      {
+        "id": 21,
+        "name": "ayahuasca",
+        "slug": "ayahuasca"
+      },
+      {
+        "id": 20,
+        "name": "retreats",
+        "slug": "retreats"
+      }
+    ],
+    "images": [
+      {
+        "id": 103,
+        "date_created": "2025-01-17T15:31:16",
+        "date_created_gmt": "2025-01-17T15:31:16",
+        "date_modified": "2025-01-17T15:32:03",
+        "date_modified_gmt": "2025-01-17T15:32:03",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/leaf-1.png",
+        "name": "Ayahuasca",
+        "alt": "Ayahuasca"
+      },
+      {
+        "id": 104,
+        "date_created": "2025-01-17T15:34:34",
+        "date_created_gmt": "2025-01-17T15:34:34",
+        "date_modified": "2025-01-17T15:34:34",
+        "date_modified_gmt": "2025-01-17T15:34:34",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car1.png",
+        "name": "car1",
+        "alt": ""
+      },
+      {
+        "id": 105,
+        "date_created": "2025-01-17T15:35:03",
+        "date_created_gmt": "2025-01-17T15:35:03",
+        "date_modified": "2025-01-17T15:35:03",
+        "date_modified_gmt": "2025-01-17T15:35:03",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car2.png",
+        "name": "car2",
+        "alt": ""
+      },
+      {
+        "id": 106,
+        "date_created": "2025-01-17T15:35:36",
+        "date_created_gmt": "2025-01-17T15:35:36",
+        "date_modified": "2025-01-17T15:35:36",
+        "date_modified_gmt": "2025-01-17T15:35:36",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car3.png",
+        "name": "car3",
+        "alt": ""
+      },
+      {
+        "id": 107,
+        "date_created": "2025-01-17T15:36:00",
+        "date_created_gmt": "2025-01-17T15:36:00",
+        "date_modified": "2025-01-17T15:36:00",
+        "date_modified_gmt": "2025-01-17T15:36:00",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car4.png",
+        "name": "car4",
+        "alt": ""
+      },
+      {
+        "id": 108,
+        "date_created": "2025-01-17T15:36:28",
+        "date_created_gmt": "2025-01-17T15:36:28",
+        "date_modified": "2025-01-17T15:36:28",
+        "date_modified_gmt": "2025-01-17T15:36:28",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car5.png",
+        "name": "car5",
+        "alt": ""
+      },
+      {
+        "id": 109,
+        "date_created": "2025-01-17T15:36:53",
+        "date_created_gmt": "2025-01-17T15:36:53",
+        "date_modified": "2025-01-17T15:36:53",
+        "date_modified_gmt": "2025-01-17T15:36:53",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car6.png",
+        "name": "car6",
+        "alt": ""
+      },
+      {
+        "id": 110,
+        "date_created": "2025-01-17T15:37:30",
+        "date_created_gmt": "2025-01-17T15:37:30",
+        "date_modified": "2025-01-17T15:37:30",
+        "date_modified_gmt": "2025-01-17T15:37:30",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car7.png",
+        "name": "car7",
+        "alt": ""
+      },
+      {
+        "id": 111,
+        "date_created": "2025-01-17T15:38:05",
+        "date_created_gmt": "2025-01-17T15:38:05",
+        "date_modified": "2025-01-17T15:38:05",
+        "date_modified_gmt": "2025-01-17T15:38:05",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car8.png",
+        "name": "car8",
+        "alt": ""
+      },
+      {
+        "id": 112,
+        "date_created": "2025-01-17T15:38:35",
+        "date_created_gmt": "2025-01-17T15:38:35",
+        "date_modified": "2025-01-17T15:38:35",
+        "date_modified_gmt": "2025-01-17T15:38:35",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car9.png",
+        "name": "car9",
+        "alt": ""
+      },
+      {
+        "id": 113,
+        "date_created": "2025-01-17T15:39:03",
+        "date_created_gmt": "2025-01-17T15:39:03",
+        "date_modified": "2025-01-17T15:39:03",
+        "date_modified_gmt": "2025-01-17T15:39:03",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car10.png",
+        "name": "car10",
+        "alt": ""
+      },
+      {
+        "id": 114,
+        "date_created": "2025-01-17T15:39:47",
+        "date_created_gmt": "2025-01-17T15:39:47",
+        "date_modified": "2025-01-17T15:39:47",
+        "date_modified_gmt": "2025-01-17T15:39:47",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car11.png",
+        "name": "car11",
+        "alt": ""
+      },
+      {
+        "id": 115,
+        "date_created": "2025-01-17T15:40:11",
+        "date_created_gmt": "2025-01-17T15:40:11",
+        "date_modified": "2025-01-17T15:40:11",
+        "date_modified_gmt": "2025-01-17T15:40:11",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car12.png",
+        "name": "car12",
+        "alt": ""
+      },
+      {
+        "id": 116,
+        "date_created": "2025-01-17T15:40:35",
+        "date_created_gmt": "2025-01-17T15:40:35",
+        "date_modified": "2025-01-17T15:40:35",
+        "date_modified_gmt": "2025-01-17T15:40:35",
+        "src": "https://shop.makuaretreats.com/wp-content/uploads/2025/01/car13.png",
+        "name": "car13",
+        "alt": ""
+      }
+    ],
+    "attributes": [],
+    "default_attributes": [],
+    "variations": [],
+    "grouped_products": [],
+    "menu_order": 0,
+    "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>1,200.00</bdi></span>",
+    "related_ids": [134],
+    "meta_data": [],
+    "stock_status": "instock",
+    "has_options": false,
+    "post_password": "",
+    "global_unique_id": "",
+    "jetpack_sharing_enabled": true,
+    "_links": {
+      "self": [
+        {
+          "href": "https://shop.makuaretreats.com/wp-json/wc/v3/products/101",
+          "targetHints": {
+            "allow": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://shop.makuaretreats.com/wp-json/wc/v3/products"
+        }
+      ]
+    }
+  }
+]

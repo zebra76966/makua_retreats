@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import MerchCard from "./merchCards";
 import data from "./merch.json";
+import axios from "axios";
 
 const Merch = () => {
   // Create a reference to the scrollable div
@@ -13,6 +14,40 @@ const Merch = () => {
       scrollRef.current.scrollLeft += direction * scrollAmount;
     }
   };
+
+  // Woo product fetch
+  const [merchProducts, setMerchProducts] = useState([]);
+
+  const baseURL = process.env.REACT_APP_API_BASE_URL;
+  const consumerKey = process.env.REACT_APP_CONSUMER_KEY;
+  const consumerSecret = process.env.REACT_APP_CONSUMER_SECRET;
+
+  // Fetch products by category
+
+  const fetchProductsByCategory = async (categoryId, setProducts) => {
+    try {
+      const response = await axios.get(`${baseURL}/products`, {
+        params: {
+          consumer_key: consumerKey,
+          consumer_secret: consumerSecret,
+          category: categoryId, // Replace with the category ID (e.g., 12)
+          per_page: 20, // Adjust as needed
+        },
+      });
+      setProducts(response.data);
+      console.log(response.data); // Should return products in the given category
+    } catch (error) {
+      console.error("Error fetching products by category:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProductsByCategory(19, setMerchProducts); // Replace "merch" with your merch category slug
+  }, []);
+
+  if (!merchProducts || merchProducts.length === 0) {
+    return <p>No retreats available.</p>;
+  }
 
   return (
     <>
@@ -27,7 +62,7 @@ const Merch = () => {
       </div>
 
       <div className="w-100 h-scroll slim-scroll" ref={scrollRef} style={{ scrollBehavior: "smooth" }}>
-        {data.map((ini) => {
+        {merchProducts.map((ini) => {
           return (
             <div className="h-element" key={ini.id}>
               <MerchCard item={ini} />
