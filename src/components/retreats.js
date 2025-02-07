@@ -61,7 +61,7 @@ const RetreatCards = () => {
             <div className="card w-100 txtSecondary card-retreats h-100" onClick={() => HandleRedirect(ini.permalink)}>
               <div className="card-body">
                 {/* <img src={icon ? icon : ini.images?.[0]?.src || "default-image.png"} height={80} alt={ini.name} /> */}
-                <img src={ini.images?.[0]?.src} height={80} alt={ini.name} />
+                <img src={ini.images?.[0]?.src} height={80} alt={ini.name} loading="lazy" />
                 <h5 className="card-title fs-2 fw-bold">{ini.name}</h5>
                 <div className="card-text h-25 mb-4 lineClamp" dangerouslySetInnerHTML={{ __html: ini.description || "" }} />
 
