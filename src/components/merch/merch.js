@@ -33,6 +33,11 @@ const Merch = () => {
           category: categoryId, // Replace with the category ID (e.g., 12)
           per_page: 20, // Adjust as needed
         },
+        withCredentials: true,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
       });
       setProducts(response.data);
       console.log(response.data); // Should return products in the given category
