@@ -18,6 +18,13 @@
   animation: 2s float ease-in-out infinite;
 }
 
+.archCard.Retreats img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 2em;
+}
+
 @keyframes float {
   0% {
     transform: translateY(-1%);
@@ -41,6 +48,40 @@
   object-fit: cover;
   width: 100%;
   border-radius: 2em;
+}
+
+.archCard.Retreats.active {
+  position: absolute;
+  scale: 1.02;
+  animation: 1.5s imageFliperRetreats 0.5s ease-in-out forwards;
+}
+
+@keyframes imageFliperRetreats {
+  0% {
+    transform: rotateY(0deg);
+    height: 85%;
+    width: 32%;
+    border: 2px solid transparent;
+  }
+
+  90% {
+    left: 0%;
+    transform: rotateY(360deg);
+    z-index: 80;
+    height: 95%;
+    width: 35%;
+    border: 2px solid transparent;
+    scale: 1.2;
+  }
+  100% {
+    left: 2%;
+    /* height: 100%; */
+    width: 35%;
+    transform: rotateY(360deg);
+    z-index: 80;
+    border: 5px solid #d1a451;
+    scale: 1;
+  }
 }
 
 .archCard.active {
@@ -99,6 +140,35 @@
   border-radius: 2em;
   animation: 1.5s scaleIn 1.2s ease-in-out forwards;
   background-color: #222222;
+}
+
+.bgBox.Retreats {
+  top: 0%;
+  left: 0%;
+  z-index: 77;
+  height: 65dvh;
+  transform: translateY(0%);
+  opacity: 0;
+  border-radius: 2em;
+  animation: 1.5s scaleInRetreats ease-in-out forwards;
+}
+
+@keyframes scaleInRetreats {
+  0% {
+    opacity: 0;
+    width: 0;
+    top: 100%;
+  }
+  50% {
+    opacity: 1;
+    width: 0;
+    top: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 95dvw;
+    top: 0%;
+  }
 }
 
 @keyframes scaleIn {
@@ -174,7 +244,17 @@
   font-size: 2.5dvh !important;
 }
 
+.retreatsRow {
+  height: 60dvh;
+}
+
 @media only screen and (max-width: 992px) {
+  .retreatsRow {
+    height: 100%;
+  }
+  .bgBox.Retreats {
+    height: 100%;
+  }
   .archCard {
     position: static;
     height: 72dvh;
@@ -259,6 +339,12 @@
     height: 72dvh;
     animation: 1.5s imageFliper2 ease-in-out forwards;
   }
+  .archCard.Retreats.active {
+    position: static;
+    scale: 1.02;
+    height: 72dvh;
+    animation: 1.5s imageFliper2 ease-in-out forwards;
+  }
 
   .bgBox {
     position: static;
@@ -273,6 +359,7 @@
     animation: 1.5s scaleIn2 2s ease-in-out forwards;
     background-color: #222222;
   }
+
   .bgBox .txtContent {
     width: 100%;
     margin-left: auto;

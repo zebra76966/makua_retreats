@@ -25,6 +25,14 @@ const Home = ({ setSecondary, setTertary }) => {
   const merch = useRef(null);
   const retreatsRef = useRef(null);
 
+  const [active, setActive] = useState(null);
+
+  useEffect(() => {
+    if (active !== null && retreatsRef.current) {
+      retreatsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [active]);
+
   useEffect(() => {
     setTimeout(() => setLoader(false), 6000);
   }, []);
@@ -123,7 +131,7 @@ const Home = ({ setSecondary, setTertary }) => {
         {!loader && (
           <>
             <div className="container-fluid p-lg-5 p-2 text-dark mt-5 " id="about">
-              <Pattern />
+              {/* <Pattern /> */}
               <div className="row p-lg-5 my-5 mx-0">
                 <motion.div className="col-lg-4 py-lg-5 py-md-3 py-2" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
                   <p className="lead py-0 my-0 fw-bold">ABOUT</p>
@@ -149,7 +157,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 <ItinarySection />
               </div>
 
-              <div ref={archetypesRef} className="w-100 d-lg-flex align-items-center justify-content-center mt-5 py-5 secArchtypes" style={{ height: "100dvh", overflow: "hidden" }}>
+              {/* <div ref={archetypesRef} className="w-100 d-lg-flex align-items-center justify-content-center mt-5 py-5 secArchtypes" style={{ height: "100dvh", overflow: "hidden" }}>
                 <div className="py-lg-0 py-5">
                   <motion.div className="py-lg-0 py-4" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.5 }}>
                     <p className="lead py-0 my-0 fw-bold">THE</p>
@@ -159,7 +167,7 @@ const Home = ({ setSecondary, setTertary }) => {
                     <Archetypes />
                   </motion.div>
                 </div>
-              </div>
+              </div> */}
 
               <div ref={merch} className="w-100 d-lg-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
                 <div className="d-lg-flex text-center py-lg-0 py-5 justify-content-center merchText" style={{ width: "10%" }}>
@@ -184,7 +192,7 @@ const Home = ({ setSecondary, setTertary }) => {
                   <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary position-relative"> RETREATS</h4>
 
                   <div className="w-100 mt-5">
-                    <RetreatCards />
+                    <RetreatCards setActive={(e) => setActive(e)} />
                   </div>
                 </div>
               </div>
@@ -199,7 +207,7 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <Pattern />
+              {/* <Pattern /> */}
 
               <Footer />
             </div>

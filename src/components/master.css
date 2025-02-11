@@ -684,3 +684,23 @@ body {
     display: none;
   }
 }
+
+.cardFadeout {
+  animation: 0.5s cardFadeout ease-in-out forwards;
+}
+
+@keyframes cardFadeout {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  99% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+    display: none;
+  }
+}
