@@ -169,14 +169,13 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div> */}
 
-              <div ref={merch} className="w-100 d-lg-flex align-items-center justify-content-center  border-top border-dark" style={{ height: "100dvh" }}>
-                <div className="d-lg-flex text-center py-lg-0 py-5 justify-content-center merchText" style={{ width: "10%" }}>
-                  <h4 className="display-1 fw-bold my-0 py-0 txtSecondary" style={{ transform: "rotate(-90deg)" }}>
-                    MERCHANDISE
-                  </h4>
-                </div>
-                <div className="merchDiv" style={{ width: "90%" }}>
-                  <Merch />
+              <div ref={retreatsRef} className="w-100 mt-5 pt-5 experience" id="experience">
+                <div className="w-100 ">
+                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary position-relative"> RETREATS</h4>
+
+                  <div className="w-100 mt-5">
+                    <RetreatCards setActive={(e) => setActive(e)} />
+                  </div>
                 </div>
               </div>
 
@@ -187,13 +186,14 @@ const Home = ({ setSecondary, setTertary }) => {
                 </div>
               </div>
 
-              <div ref={retreatsRef} className="w-100 mt-5 pt-5 experience" id="experience">
-                <div className="w-100 ">
-                  <h4 className="display-1 fw-bold mt-0 pt-0 text-center txtSecondary position-relative"> RETREATS</h4>
-
-                  <div className="w-100 mt-5">
-                    <RetreatCards setActive={(e) => setActive(e)} />
-                  </div>
+              <div ref={merch} className="w-100 d-lg-flex align-items-center justify-content-center  " style={{ height: "100dvh" }}>
+                <div className="d-lg-flex text-center py-lg-0 py-5 justify-content-center merchText" style={{ width: "10%" }}>
+                  <h4 className="display-1 fw-bold my-0 py-0 txtSecondary" style={{ transform: "rotate(-90deg)" }}>
+                    MERCHANDISE
+                  </h4>
+                </div>
+                <div className="merchDiv" style={{ width: "90%" }}>
+                  <Merch />
                 </div>
               </div>
 
