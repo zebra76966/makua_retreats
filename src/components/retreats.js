@@ -1,4 +1,4 @@
-import React, { useState, useEffect, act } from "react";
+import React, { useState, useEffect, act, useRef } from "react";
 import cardsData from "./retreats.json";
 import wooData from "./woo-retreats.json";
 import axios from "axios";
@@ -7,9 +7,23 @@ import { motion } from "framer-motion";
 
 const RetreatCards = ({ setActive }) => {
   const [active, setActive2] = useState(null);
+
   useEffect(() => {
     setActive(active);
   }, [active]);
+
+  const [showFull, showFullDet] = useState(false);
+  const [showToggle, setShowToggle] = useState(true);
+  const paragraphRef = useRef(null);
+
+  useEffect(() => {
+    if (paragraphRef.current) {
+      const lineHeight = parseFloat(getComputedStyle(paragraphRef.current).lineHeight);
+      const lines = paragraphRef.current.scrollHeight / lineHeight;
+      setShowToggle(lines > 5); // Show toggle only if more than 5 lines
+    }
+  }, [active]);
+
   function serachsvg(name) {
     let index = cardsData.findIndex((find) => find.name.toLocaleLowerCase() === name.toLocaleLowerCase());
     if (index !== -1) {
@@ -63,7 +77,7 @@ const RetreatCards = ({ setActive }) => {
   };
 
   return (
-    <div className={`row px-0 mx-0 position-relative ${active !== null ? "retreatsRow" : ""}`} id="retreats">
+    <div className={`row px-0 mx-0 position-relative mb-5 ${active !== null ? "retreatsRow" : ""}`} id="retreats">
       {retreatProducts.map((ini, i) => {
         const icon = serachsvg(ini.name);
 
@@ -72,7 +86,7 @@ const RetreatCards = ({ setActive }) => {
             <div className="card w-100 txtSecondary card-retreats h-100">
               <div className="card-body">
                 {/* <img src={icon ? icon : ini.images?.[0]?.src || "default-image.png"} height={80} alt={ini.name} /> */}
-                <img src={ini.images?.[0]?.src} height={80} alt={ini.name} loading="lazy" />
+                <img src={ini.images?.[0]?.src} height={80} alt={ini.name} loading="lazy" style={{ borderRadius: "0.8em" }} />
                 <h5 className="card-title fs-2 fw-bold">{ini.name}</h5>
                 <div className="card-text h-25 mb-4 lineClamp" dangerouslySetInnerHTML={{ __html: ini.description || "" }} />
 
@@ -87,30 +101,62 @@ const RetreatCards = ({ setActive }) => {
 
       {console.log(retreatProducts[active])}
       {active !== null && (
-        <div onClick={() => setActive2(null)} className="bgBox Retreats px-lg-2 px-3 px-md-4 py-5 shadow mx-0 borderSecondary border border-4 pricetag" style={{ top: 0 }}>
+        <div className="bgBox Retreats px-lg-2 px-3 px-md-4 py-5 shadow mx-0 borderSecondary border border-4 pricetag" style={{ top: 0 }}>
           <div className={`archCard Retreats shadow-lg  active`} onClick={() => setActive2(0)}>
-            <img src={retreatProducts[active].images?.[0]?.src} />
+            <img src={retreatProducts[active].images?.[0]?.src} style={{ borderRadius: "1em" }} />
           </div>
 
           <div className="txtContent txtSecondary">
-            <motion.div className="col-lg-4 py-lg-5 py-3" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.5 }}>
+            <motion.div className="py-lg-5 py-3" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.5 }}>
               {/* <p className="lead py-0 my-0 fw-bold">THE</p> */}
               <h4 className="display-1 fw-bold mt-0 pt-0"> {retreatProducts[active].name}</h4>
             </motion.div>
+            <div className={`lineClampRetreats ${showFull ? "" : "lineClamp"} `}>
+              <motion.p
+                ref={paragraphRef}
+                className="quicks-font  fs-4"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1.6 }}
+                dangerouslySetInnerHTML={{ __html: retreatProducts[active].description || "" }}
+              ></motion.p>
+            </div>
+            {retreatProducts[active].description.length > 200 && (
+              <motion.span
+                className="fw-bold fs-5 border border-1 borderSecondary p-2 rounded-pill px-3 d-inline-block mb-3"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 2 }}
+                onClick={() => showFullDet(!showFull)}
+                style={{ cursor: "pointer" }}
+              >
+                {" "}
+                Show {showFull ? "Less" : "More"}{" "}
+              </motion.span>
+            )}
 
-            <motion.p
-              className="quicks-font  fs-4"
+            <motion.div
+              className="position-absolute top-0 end-0 m-lg-3 mt-lg-5 m-3 bg-dark p-4 rounded-pill"
+              onClick={() => {
+                showFullDet(false);
+                setActive2(null);
+              }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.6 }}
-              dangerouslySetInnerHTML={{ __html: retreatProducts[active].description || "" }}
-            ></motion.p>
+              transition={{ duration: 1, delay: 2 }}
+            >
+              <AnimEyeInfinte isSecondary={true} />
+            </motion.div>
 
-            <div className="bottomEye position-absolute m-3" onClick={() => HandleRedirect(retreatProducts[active].permalink)}>
-              {/* <AnimEyeInfinte isSecondary={true} /> */}
-
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2 }}
+              className="bottomEye position-absolute m-3"
+              onClick={() => HandleRedirect(retreatProducts[active].permalink)}
+            >
               <button className="bg-secondary btn text-dark fw-bold me-2">More Information</button>
-            </div>
+            </motion.div>
           </div>
         </div>
       )}

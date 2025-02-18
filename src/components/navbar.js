@@ -8,6 +8,10 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
   const [active, setActive] = useState("Home");
   const [activeLink, setActiveLink] = useState("");
 
+  const baseURL = process.env.REACT_APP_API_BASE_URL;
+  const consumerKey = process.env.REACT_APP_CONSUMER_KEY;
+  const consumerSecret = process.env.REACT_APP_CONSUMER_SECRET;
+
   useEffect(() => {
     if (loadTrans) {
       setTimeout(() => setFullNav(true), 1200);
@@ -59,9 +63,17 @@ const Navbar = ({ setLoadTrans, loadTrans, isSecondary, isTertary }) => {
               <a href="#" className="btn  bg-dark text-primary bg-dark text-primary rounded-0 p-2 btn-lg">
                 <AnimEyeInfinte />
               </a>
-              <a href="mailto:contact@makuaretreats.com" className="btn btn-dark px-lg-5 px-2 bg-dark text-primary rounded-0 p-2 btn-lg">
+              <button
+                className="btn btn-dark px-lg-5 px-2 bg-dark text-primary rounded-0 p-2 btn-lg"
+                onClick={() => {
+                  window.open("https://shop.makuaretreats.com/cart/", "_blank");
+                }}
+              >
                 RESERVE
-              </a>
+              </button>
+              {/* <a href="mailto:contact@makuaretreats.com" className="btn btn-dark px-lg-5 px-2 bg-dark text-primary rounded-0 p-2 btn-lg">
+                RESERVE
+              </a> */}
             </div>
           </div>
         </div>

@@ -145,8 +145,10 @@
 .bgBox.Retreats {
   top: 0%;
   left: 0%;
+  position: static;
   z-index: 77;
-  height: 65dvh;
+  height: 100%;
+  min-height: 65dvh;
   transform: translateY(0%);
   opacity: 0;
   border-radius: 2em;
@@ -245,10 +247,16 @@
 }
 
 .retreatsRow {
-  height: 60dvh;
+  min-height: 60dvh;
 }
 
 @media only screen and (max-width: 992px) {
+  .archCard.Retreats.active {
+    position: static;
+    scale: 1.02;
+    height: 72dvh;
+    animation: 1.5s imageFliper2 ease-in-out forwards;
+  }
   .retreatsRow {
     height: 100%;
   }

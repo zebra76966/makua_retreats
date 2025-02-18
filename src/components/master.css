@@ -27,9 +27,12 @@ body::-webkit-scrollbar-thumb {
 
 .lineClamp {
   -webkit-line-clamp: 3;
-  overflow: hidden;
+  overflow: hidden !important;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.lineClamp.h-25 {
+  height: 75px !important;
 }
 
 .thinScroll::-webkit-scrollbar {
@@ -42,6 +45,28 @@ body::-webkit-scrollbar-thumb {
 .thinScroll::-webkit-scrollbar-thumb {
   background-color: #222222;
   /* border-radius: 10px; */
+}
+
+.thinScroll2::-webkit-scrollbar {
+  width: 5px;
+}
+.thinScroll2::-webkit-scrollbar-track {
+  background-color: #cfc3b4;
+}
+
+.thinScroll2::-webkit-scrollbar-thumb {
+  background-color: #222222;
+  /* border-radius: 10px; */
+}
+
+.lineClampRetreats p {
+  transition: all 0.3s ease-in-out;
+}
+.lineClampRetreats.lineClamp p {
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 html,
